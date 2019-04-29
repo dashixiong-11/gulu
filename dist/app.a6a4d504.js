@@ -12422,8 +12422,18 @@ exports.default = void 0;
 //
 //
 //
-//
-var _default = {};
+var _default = {
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: 'left',
+      validator: function validator(value) {
+        return value == 'left' || value == 'right';
+      }
+    }
+  }
+};
 exports.default = _default;
         var $603f7f = exports.default || module.exports;
       
@@ -12434,23 +12444,26 @@ exports.default = _default;
         /* template */
         Object.assign($603f7f, (function () {
           var render = function() {
+  var _obj
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "button",
-      { staticClass: "g-button" },
-      [
-        _c("svg", { staticClass: "icon", attrs: { "aria-hidden": "true" } }, [
-          _c("use", { attrs: { "xlink:href": "#i-setting" } })
-        ]),
-        _vm._v(" "),
-        _vm._t("default")
-      ],
-      2
-    )
-  ])
+  return _c(
+    "button",
+    {
+      staticClass: "g-button",
+      class: ((_obj = {}), (_obj["icon-" + _vm.iconPosition] = true), _obj)
+    },
+    [
+      _vm.icon
+        ? _c("svg", { staticClass: "icon", attrs: { "aria-hidden": "true" } }, [
+            _c("use", { attrs: { "xlink:href": "#i-" + _vm.icon } })
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "content" }, [_vm._t("default")], 2)
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
