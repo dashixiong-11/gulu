@@ -1,3 +1,11 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .g-button {
   display: inline-flex;
   justify-content: center;
@@ -34,6 +42,9 @@
 }
 .g-button.icon-right > .content {
   order: 1;
+}
+.g-button .loading {
+  animation: spin 1s infinite linear;
 }
 .g-icon {
   width: 1em;
