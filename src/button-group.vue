@@ -2,7 +2,6 @@
   <div class='g-button-group'>
     <slot></slot>
   </div>
-
 </template>
 
 <script>
@@ -19,7 +18,6 @@
   }
 </script>
 <style lang="scss">
-
  .g-button-group {
   display:inline-flex;
   vertical-align:middle;
