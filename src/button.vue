@@ -1,7 +1,7 @@
 <template>
-  <button class='g-button' :class='{[`icon-${iconPosition}`]:true}'>
-    <g-icon v-if='icon':name='icon'></g-icon>
-    <g-icon class='loading' name='jiazaizhong'></g-icon>
+  <button class='g-button' :class='{[`icon-${iconPosition}`]:true}' @click="$emit('click')">
+    <g-icon v-if='icon && !loading':name='icon'></g-icon>
+    <g-icon class='loading icon' v-if='loading' name='jiazaizhong'></g-icon>
       <div class="content">
         <slot></slot>
       </div>
@@ -11,6 +11,10 @@
 <script>
   export default {
     props:{
+      loading:{
+        type:Boolean,
+        default:false
+      },
       icon:{},
       iconPosition:{
         type:String,
@@ -42,11 +46,11 @@
   font-size:var(--font-size);
   height:var(--button-height);
   vertical-align:middle;
-    > .icon{
+     .icon{
       order:1;
       margin-right:.1em;
     }
-    > .content{
+     .content{
       order:2;
     }
   &:hover{
@@ -58,19 +62,18 @@
   &:focus{
     outline:none;
   }
-  &.icon-right{
-    > .icon{
-      order:2;
-      margin-left:.1em;
-      margin-right:0;
-    }
-    > .content{
-      order:1;
-    }
-  }
   .loading{
     animation: spin 1s infinite linear;
   }
         }
-
+   .icon-right{
+     .icon{
+      order:2;
+      margin-left:.1em;
+      margin-right:0;
+    }
+     .content{
+      order:1;
+    }
+  }
 </style>
