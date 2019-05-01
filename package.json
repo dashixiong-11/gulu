@@ -1,6 +1,6 @@
 {
   "name": "dashixiong-gulu",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "一个简单的ui",
   "main": "dist/index.js",
   "scripts": {
