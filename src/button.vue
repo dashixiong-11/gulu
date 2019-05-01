@@ -9,7 +9,12 @@
 </template>
 
 <script>
+  import Icon from './icon'
+  Vue.component('g-icon',Icon)
   export default {
+    components:{
+      'g-icon':Icon
+    }
     props:{
       loading:{
         type:Boolean,
