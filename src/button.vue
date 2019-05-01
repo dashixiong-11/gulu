@@ -14,7 +14,7 @@
   export default {
     components:{
       'g-icon':Icon
-    }
+    },
     props:{
       loading:{
         type:Boolean,
