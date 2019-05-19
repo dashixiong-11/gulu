@@ -1,5 +1,5 @@
 <template>
-    <svg  class="g-icon" aria-hidden="true">
+    <svg  class="icon" aria-hidden="true">
       <use :xlink:href=`#i-${name}`></use>
     </svg>      
 </template>
@@ -12,7 +12,7 @@
 
 </script>
 <style lang='scss'>
-    .g-icon {
+    .icon {
        width: 1em; height: 1em;
        vertical-align: -0.15em;
        fill: currentColor;

@@ -12485,11 +12485,9 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "svg",
-    { staticClass: "g-icon", attrs: { "aria-hidden": "true" } },
-    [_c("use", { attrs: { "xlink:href": "#i-" + _vm.name } })]
-  )
+  return _c("svg", { staticClass: "icon", attrs: { "aria-hidden": "true" } }, [
+    _c("use", { attrs: { "xlink:href": "#i-" + _vm.name } })
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
