@@ -31,6 +31,25 @@ html{
 
 IE 8 及以上支持。
 
+2. 安装 gulu
+```
+npm i --save dashixiong-gulu
+```
+3. 引入gulu
+```
+import {Button,ButtonGroup,Icon} from 'dashixiong-gulu'
+import 'dashixiong-gulu/dist/index.css'
+
+export default{
+    name:'app',
+    components:{
+    'g-button':Button,
+    'g-icon':Icon,
+    'g-button-group':ButtonGroup
+    }
+}
+```
+
 ## 文档
 
 ## 提问
