@@ -12802,16 +12802,16 @@ exports.default = _default;
         domProps: { value: _vm.value },
         on: {
           change: function($event) {
-            return _vm.$emit("change", $event)
+            return _vm.$emit("change", $event.target.value)
           },
           input: function($event) {
-            return _vm.$emit("input", $event)
+            return _vm.$emit("input", $event.target.value)
           },
           focus: function($event) {
-            return _vm.$emit("focus", $event)
+            return _vm.$emit("focus", $event.target.value)
           },
           blur: function($event) {
-            return _vm.$emit("blur", $event)
+            return _vm.$emit("blur", $event.target.value)
           }
         }
       }),
@@ -12888,15 +12888,12 @@ _vue.default.component('g-input', _input.default);
 new _vue.default({
   el: '#app',
   data: {
+    message: '',
     loading1: true,
     loading2: false,
     loading3: false
   },
-  methods: {
-    inputchange: function inputchange(e) {
-      console.log(e.target.value);
-    }
-  }
+  methods: {}
 });
 },{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue","./button-group":"src/button-group.vue","./input":"src/input.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

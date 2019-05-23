@@ -12594,16 +12594,16 @@ exports.default = _default;
         domProps: { value: _vm.value },
         on: {
           change: function($event) {
-            return _vm.$emit("change", $event)
+            return _vm.$emit("change", $event.target.value)
           },
           input: function($event) {
-            return _vm.$emit("input", $event)
+            return _vm.$emit("input", $event.target.value)
           },
           focus: function($event) {
-            return _vm.$emit("focus", $event)
+            return _vm.$emit("focus", $event.target.value)
           },
           blur: function($event) {
-            return _vm.$emit("blur", $event)
+            return _vm.$emit("blur", $event.target.value)
           }
         }
       }),
@@ -12736,9 +12736,15 @@ describe('Input', function () {
         var callback = sinon.fake();
         vm.$on(eventName, callback);
         var event = new Event(eventName);
+        Object.defineProperty(event, 'target', {
+          value: {
+            value: 'hi'
+          },
+          enumerable: true
+        });
         var inputElement = vm.$el.querySelector('input');
         inputElement.dispatchEvent(event);
-        expect(callback).to.have.been.calledWith(event);
+        expect(callback).to.have.been.calledWith('hi');
       });
     });
   });
