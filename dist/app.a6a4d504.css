@@ -119,3 +119,31 @@
 .wrapper .error-message[data-v-378c04] {
   color: #f1453d;
 }
+.box[data-v-00041c] {
+  display: inline-block;
+  border: 1px solid #ddd;
+  width: 475px;
+}
+.box .province[data-v-00041c], .box .city[data-v-00041c], .box .area[data-v-00041c] {
+  text-align: center;
+  width: 33%;
+}
+ul[data-v-00041c] {
+  height: 6em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-top: 1em;
+}
+ul .active[data-v-00041c] {
+  color: red;
+}
+li[data-v-00041c] {
+  list-style: none;
+}
+.body[data-v-00041c] {
+  display: flex;
+  justify-content: space-between;
+}
+ul[data-v-00041c]::-webkit-scrollbar {
+  display: none;
+}
