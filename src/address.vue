@@ -30,8 +30,6 @@
   import Province from './province'
   import City from './city'
   import Area from './area'
-  console.log(City)
-  console.log(Area)
   export default{
     data(){
       return{
@@ -64,7 +62,6 @@
         this.activearea = '区'
         }else if(z===2){
           this.activearea = e.label
-          console.log(this.activeprovince,this.activecity,this.activearea)
         }
       }
     }
