@@ -1,12 +1,18 @@
 <template>
-    <div class="col" :class="[`col-${span}`]">
+    <div class="col" :class="[span && `col-${span}`,offset && `offset-${offset}`]" :style="{paddingLeft:gutter/2+'px',marginRight:gutter/2+'px'}" >
         <slot></slot>
     </div>
 </template>
 <script>
     export default {
         props:{
-            span:[Number,String]
+            span:[Number,String],
+            offset:[Number,String],
+        },
+        data(){
+            return{
+                gutter:0
+            }
         }
     }
 </script>
@@ -20,6 +26,12 @@
         @for $n from 1 through 24{
             &.#{$class}#{$n}{
                 width:($n/24)*100%;
+            }
+        }
+        $class:offset-;
+        @for $n from 1 through 24{
+            &.#{$class}#{$n}{
+                margin-left:($n/24)*100%;
             }
         }
     }

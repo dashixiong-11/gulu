@@ -23400,7 +23400,31 @@ render._withStripped = true
       }
     })();
 },{"./province":"src/province.js","./city":"src/city.js","./area":"src/area.js","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/row.vue":[function(require,module,exports) {
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+var _default = {
+  name: 'GuluRow',
+  props: {
+    gutter: [Number, String]
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$children.forEach(function (vm) {
+      vm.gutter = _this.gutter;
+    });
+  }
+};
+exports.default = _default;
         var $a1fd64 = exports.default || module.exports;
       
       if (typeof $a1fd64 === 'function') {
@@ -23413,7 +23437,12 @@ render._withStripped = true
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [_vm._t("default")], 2)
+  return _c(
+    "div",
+    { staticClass: "row", style: { marginR: 0 - _vm.gutter / 2 + "px" } },
+    [_vm._t("default")],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -23462,7 +23491,13 @@ exports.default = void 0;
 //
 var _default = {
   props: {
-    span: [Number, String]
+    span: [Number, String],
+    offset: [Number, String]
+  },
+  data: function data() {
+    return {
+      gutter: 0
+    };
   }
 };
 exports.default = _default;
@@ -23480,7 +23515,17 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "col", class: ["col-" + _vm.span] },
+    {
+      staticClass: "col",
+      class: [
+        _vm.span && "col-" + _vm.span,
+        _vm.offset && "offset-" + _vm.offset
+      ],
+      style: {
+        paddingLeft: _vm.gutter / 2 + "px",
+        marginRight: _vm.gutter / 2 + "px"
+      }
+    },
     [_vm._t("default")],
     2
   )
@@ -23591,7 +23636,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50038" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50232" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
