@@ -149,13 +149,9 @@ ul[data-v-00041c]::-webkit-scrollbar {
 }
 .row[data-v-a1fd64] {
   display: flex;
-  /*        justify-content: space-between*/
 }
 .col[data-v-a848fc] {
-  border: 1px solid red;
-  height: 100px;
-  background: blanchedalmond;
-  width: 100%;
+  width: 50%;
 }
 .col.col-1[data-v-a848fc] {
   width: 4.1666666667%;

@@ -1,5 +1,5 @@
 <template>
-    <div class="row" :style="{marginR:0 -gutter/2+'px'}">
+    <div class="row" :style="rowStyle">
         <slot></slot>
     </div>
 </template>
@@ -9,6 +9,18 @@
         props:{
             gutter:[Number,String]
         },
+        data(){
+            return{
+
+            }
+        },
+        computed:{
+            rowStyle(){
+                return{
+                    marginLeft: - this.gutter / 2 + 'px',marginRight: - this.gutter / 2 + 'px'
+                }
+            }
+        },
         mounted() {
             this.$children.forEach((vm)=>{
                 vm.gutter = this.gutter
@@ -17,8 +29,7 @@
     }
 </script>
 <style lang="scss" scoped>
-    .row {
+    .row{
         display: flex;
-/*        justify-content: space-between*/
     }
 </style>

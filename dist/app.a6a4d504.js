@@ -23416,6 +23416,17 @@ var _default = {
   props: {
     gutter: [Number, String]
   },
+  data: function data() {
+    return {};
+  },
+  computed: {
+    rowStyle: function rowStyle() {
+      return {
+        marginLeft: -this.gutter / 2 + 'px',
+        marginRight: -this.gutter / 2 + 'px'
+      };
+    }
+  },
   mounted: function mounted() {
     var _this = this;
 
@@ -23439,7 +23450,7 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "row", style: { marginR: 0 - _vm.gutter / 2 + "px" } },
+    { staticClass: "row", style: _vm.rowStyle },
     [_vm._t("default")],
     2
   )
@@ -23489,6 +23500,8 @@ exports.default = void 0;
 //
 //
 //
+//
+//
 var _default = {
   props: {
     span: [Number, String],
@@ -23498,6 +23511,19 @@ var _default = {
     return {
       gutter: 0
     };
+  },
+  computed: {
+    colStyle: function colStyle() {
+      return {
+        paddingLeft: this.gutter / 2 + 'px',
+        paddingRight: this.gutter / 2 + 'px'
+      };
+    },
+    colClass: function colClass() {
+      var span = this.span,
+          offset = this.offset;
+      return [span && "col-".concat(span), offset && "offset-".concat(offset)];
+    }
   }
 };
 exports.default = _default;
@@ -23515,19 +23541,15 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass: "col",
-      class: [
-        _vm.span && "col-" + _vm.span,
-        _vm.offset && "offset-" + _vm.offset
-      ],
-      style: {
-        paddingLeft: _vm.gutter / 2 + "px",
-        marginRight: _vm.gutter / 2 + "px"
-      }
-    },
-    [_vm._t("default")],
-    2
+    { staticClass: "col", class: _vm.colClass, style: _vm.colStyle },
+    [
+      _c(
+        "div",
+        { staticStyle: { border: "1px solid green", height: "100px" } },
+        [_vm._t("default")],
+        2
+      )
+    ]
   )
 }
 var staticRenderFns = []
