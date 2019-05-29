@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <style type='text/css'>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    :root{
-      --button-height:32px;
-      --button-bg:white;
-      --font-size:14px;
-      --button-active-bg:#eee;
-      --border-radius:4px;
-      --color:#333;
-      --border-color:#999;
-      --border-color-hover:#666;
-    }
-    body{
-      font-size:var(--font-size)
-    }
-    #app{
-      margin:20px;
-    }
+    <meta charset="UTF-8">
+    <title></title>
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --button-height: 32px;
+            --button-bg: white;
+            --font-size: 14px;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+        }
+
+        body {
+            font-size: var(--font-size)
+        }
+
+        #app {
+            margin: 20px;
+        }
     </style>
 
 </head>
 <body>
- <div id="app">
+<div id="app">
 
-  <g-button> 按钮</g-button>
-  <g-button icon='setting'> 按钮</g-button>
-  <g-button icon='setting' icon-position='right'> 按钮</g-button>
-  <br>
-  <br>
+    <g-button> 按钮</g-button>
+    <g-button icon='setting'> 按钮</g-button>
+    <g-button icon='setting' icon-position='right'> 按钮</g-button>
+    <br>
+    <br>
 
-  <g-button :loading='loading1' @click='loading1 = !loading1'> 按钮</g-button>
-  <g-button icon='setting' :loading='loading2' @click='loading2 = !loading2'> 按钮</g-button>
-  <g-button icon='setting' :loading='loading3' icon-position='right' @click='loading3 = !loading3'> 按钮</g-button>
-  <br>
-  <br>
-  
-  <g-button-group>
-    <g-button icon="left"> 按钮</g-button>
-    <g-button icon="right" icon-position="right"> 按钮</g-button>
-  </g-button-group>
-  <br>
-  <br>
-  <g-input value="张三" disabled></g-input> <!--vue使用的是html语法 不是xml语法所以标签不能自闭和 -->
-  <g-input value="李四" readonly></g-input>
-  <br>
-  <br>
-  <g-input  v-model='message' error="写错了"></g-input>
-  <br>
-  <br>
-  <!--<g-picker></g-picker>-->
-         <g-row gutter="20">
-             <g-col span="12">1</g-col>
-             <g-col span="12">1</g-col>
-         </g-row>
- </div>
+    <g-button :loading='loading1' @click='loading1 = !loading1'> 按钮</g-button>
+    <g-button icon='setting' :loading='loading2' @click='loading2 = !loading2'> 按钮</g-button>
+    <g-button icon='setting' :loading='loading3' icon-position='right' @click='loading3 = !loading3'> 按钮</g-button>
+    <br>
+    <br>
+
+    <g-button-group>
+        <g-button icon="left"> 按钮</g-button>
+        <g-button icon="right" icon-position="right"> 按钮</g-button>
+    </g-button-group>
+    <br>
+    <br>
+    <g-input value="张三" disabled></g-input> <!--vue使用的是html语法 不是xml语法所以标签不能自闭和 -->
+    <g-input value="李四" readonly></g-input>
+    <br>
+    <br>
+    <g-input v-model='message' error="写错了"></g-input>
+    <br>
+    <br>
+    <!--<g-picker></g-picker>-->
+    <g-row>
+        <g-col span="12">1</g-col>
+        <g-col span="12">1</g-col>
+    </g-row>
+</div>
 </body>
 <script src='./src/app.js'></script>
 </html>

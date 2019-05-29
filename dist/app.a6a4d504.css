@@ -150,8 +150,14 @@ ul[data-v-00041c]::-webkit-scrollbar {
 .row[data-v-a1fd64] {
   display: flex;
 }
-.col[data-v-a848fc] {
-  width: 50%;
+.row.align-right[data-v-a1fd64] {
+  justify-content: flex-end;
+}
+.row.align-left[data-v-a1fd64] {
+  justify-content: flex-start;
+}
+.row.align-center[data-v-a1fd64] {
+  justify-content: center;
 }
 .col.col-1[data-v-a848fc] {
   width: 4.1666666667%;
