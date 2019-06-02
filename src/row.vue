@@ -7,45 +7,44 @@
     export default {
         name: 'GuluRow',
         props: {
-            gutter: [Number, String],
+            gutter: {
+                type: [Number, String]
+            },
             align: {
                 type: String,
-                validator(value) {
-                    return ['left', 'right', 'content'].includes(value)
+                validator (value) {
+                    return ['left', 'right', 'center'].indexOf(value) >= 0
                 }
             }
         },
-        data() {
-            return {}
-        },
         computed: {
-            rowStyle() {
-                return {
-                    marginLeft: -this.gutter / 2 + 'px', marginRight: -this.gutter / 2 + 'px'
-                }
+            rowStyle () {
+                let {gutter} = this
+                return {marginLeft: -gutter / 2 + 'px', marginRight: -gutter / 2 + 'px'}
             },
-            rowClass(){
+            rowClass () {
                 let {align} = this
                 return [align && `align-${align}`]
             }
         },
-        mounted() {
+        mounted () {
             this.$children.forEach((vm) => {
                 vm.gutter = this.gutter
             })
         }
     }
 </script>
-<style lang="scss" scoped>
-    .row {
+<style scoped lang="scss">
+    .row{
         display: flex;
-        &.align-right{
-            justify-content: flex-end;
-        }
-        &.align-left{
+        flex-wrap: wrap;
+        &.align-left {
             justify-content: flex-start;
         }
-        &.align-center{
+        &.align-right {
+            justify-content: flex-end;
+        }
+        &.align-center {
             justify-content: center;
         }
     }
