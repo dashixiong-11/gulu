@@ -119,34 +119,6 @@
 .wrapper .error-message[data-v-378c04] {
   color: #f1453d;
 }
-.box[data-v-00041c] {
-  display: inline-block;
-  border: 1px solid #ddd;
-  width: 475px;
-}
-.box .province[data-v-00041c], .box .city[data-v-00041c], .box .area[data-v-00041c] {
-  text-align: center;
-  width: 33%;
-}
-ul[data-v-00041c] {
-  height: 6em;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  margin-top: 1em;
-}
-ul .active[data-v-00041c] {
-  color: red;
-}
-li[data-v-00041c] {
-  list-style: none;
-}
-.body[data-v-00041c] {
-  display: flex;
-  justify-content: space-between;
-}
-ul[data-v-00041c]::-webkit-scrollbar {
-  display: none;
-}
 .row[data-v-a1fd64] {
   display: flex;
   flex-wrap: wrap;
@@ -887,4 +859,15 @@ ul[data-v-00041c]::-webkit-scrollbar {
 .col.offset-wide-pc-24[data-v-a848fc] {
     margin-left: 100%;
 }
+}
+.layout[data-v-a03735] {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.layout.hasSider[data-v-a03735] {
+  flex-direction: row;
+}
+.content[data-v-c9ecdf] {
+  flex-grow: 1;
 }
