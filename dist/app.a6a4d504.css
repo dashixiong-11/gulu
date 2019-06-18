@@ -871,3 +871,24 @@
 .content[data-v-c9ecdf] {
   flex-grow: 1;
 }
+.toast[data-v-e9230e] {
+  position: fixed;
+  color: white;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 50%;
+  height: 40px;
+  transform: translateX(-50%);
+  font-size: 14px;
+  line-height: 1.8;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+.line[data-v-e9230e] {
+  height: 100%;
+  border-left: 1px solid #666;
+  margin: 0 16px;
+}
