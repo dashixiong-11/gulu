@@ -13448,6 +13448,8 @@ exports.default = void 0;
 //
 //
 //
+//
+//
 var _default = {
   name: 'GuluToast',
   props: {
@@ -13465,30 +13467,46 @@ var _default = {
         //如果你的type是个对象，那么你的默认值就必须用函数return出来
         return {
           text: '关闭',
-          callback: function callback(toast) {
-            toast.callback();
-          }
+          callback: undefined
         };
       }
     }
   },
   mounted: function mounted() {
-    var _this = this;
-
-    if (this.autoClose) {
-      setTimeout(function () {
-        _this.close();
-      }, this.autoCloseDelay * 1000);
-    }
+    this.execAutoClose();
+    this.updateStyles();
   },
   methods: {
+    execAutoClose: function execAutoClose() {
+      var _this = this;
+
+      if (this.autoClose) {
+        setTimeout(function () {
+          _this.close();
+        }, this.autoCloseDelay * 1000);
+      }
+    },
+    updateStyles: function updateStyles() {
+      var _this2 = this;
+
+      this.$nextTick(function () {
+        _this2.$refs.line.style.height = _this2.$refs.toast.getBoundingClientRect().height + 'px';
+      });
+    },
     close: function close() {
       this.$el.remove();
       this.$destroy();
     },
+
+    /*            log(){
+                    ...    假如你需要通过callback 调用组件中的方法
+                },*/
     onClickClose: function onClickClose() {
       this.close();
-      this.closeButton.callback();
+
+      if (this.closeButton && typeof this.closeButton.callback == 'function') {
+        this.closeButton.callback();
+      }
     }
   },
   data: function data() {
@@ -13508,24 +13526,17 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "toast" },
-    [
-      _vm._t("default"),
-      _vm._v(" "),
-      _c("span", { staticClass: "line" }),
-      _vm._v(" "),
-      _vm.closeButton
-        ? _c(
-            "span",
-            { staticClass: "close", on: { click: _vm.onClickClose } },
-            [_vm._v("\n        " + _vm._s(_vm.closeButton.text) + "\n    ")]
-          )
-        : _vm._e()
-    ],
-    2
-  )
+  return _c("div", { ref: "toast", staticClass: "toast" }, [
+    _c("div", { staticClass: "message" }, [_vm._t("default")], 2),
+    _vm._v(" "),
+    _c("span", { ref: "line", staticClass: "line" }),
+    _vm._v(" "),
+    _vm.closeButton
+      ? _c("span", { staticClass: "close", on: { click: _vm.onClickClose } }, [
+          _vm._v("\n        " + _vm._s(_vm.closeButton.text) + "\n    ")
+        ])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -13574,16 +13585,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _default = {
   install: function install(Vue, options) {
-    Vue.prototype.$toast = function (message) {
+    Vue.prototype.$toast = function (message, toastOptions) {
       var Constructor = Vue.extend(_toast.default);
       var toast = new Constructor({
         propsData: {
-          closeButton: {
-            text: '关闭',
-            callback: function callback() {
-              console.log('关闭');
-            }
-          }
+          closeButton: toastOptions.closeButton
         }
       });
       toast.$slots.default = [message];
@@ -13662,7 +13668,18 @@ new _vue.default({
   },
   methods: {
     showToast: function showToast() {
-      this.$toast('massige');
+      this.$toast('很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字', {
+        closeButton: {
+          text: '关闭',
+          callback: function callback()
+          /*toast*/
+          {
+            //这里拿到组件实例
+            //toast.log()
+            console.log('关闭');
+          }
+        }
+      });
     }
   }
 });
@@ -13694,7 +13711,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49615" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52083" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
