@@ -1,5 +1,5 @@
 <template>
-    <div class="toast" ref="toast">
+    <div class="toast" ref="toast" :class="toastClasses">
         <div class="message">
             <slot></slot>
         </div>
@@ -30,7 +30,19 @@
                         callback: undefined
                     }
                 }
+            },
+            position:{
+                type:String,
+                default:'top',
+                validator(value){
+                    return ['top','bottom','middle'].indexOf(value) >= 0
+                }
             }
+        },
+        computed:{
+          toastClasses(){
+              return {[`position-${this.position}`]:true}
+          }
         },
         mounted() {
             this.execAutoClose()
@@ -79,7 +91,6 @@
         padding: 0 16px;
         display: flex;
         align-items: center;
-        top: 0;
         left: 50%;
         min-height: $toast-min-height;
         transform: translateX(-50%);
@@ -99,6 +110,18 @@
         .close{
             cursor: pointer;
             flex-shrink:0;
+        }
+        &.position-top{
+            top: 0;
+            transform:translateX(-50%);
+        }
+        &.position-bottom{
+            bottom: 0;
+            transform:translateX(-50%);
+        }
+        &.position-middle{
+            top: 50%;
+            transform: translate(-50%,-50%);
         }
     }
 </style>
