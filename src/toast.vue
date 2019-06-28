@@ -63,7 +63,7 @@
             },
             close() {
                 this.$el.remove()
-                this.$emit('Close')
+                this.$emit('close')
                 this.$destroy()
             },
 /*            log(){

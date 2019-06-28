@@ -13510,7 +13510,7 @@ var _default = {
     },
     close: function close() {
       this.$el.remove();
-      this.$emit('Close');
+      this.$emit('close');
       this.$destroy();
     },
 
@@ -13608,14 +13608,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function createToast(_ref) {
   var Vue = _ref.Vue,
       message = _ref.message,
-      propsData = _ref.propsData;
+      propsData = _ref.propsData,
+      onClose = _ref.onClose;
   var Constructor = Vue.extend(_toast.default);
   var toast = new Constructor({
     propsData: propsData
   });
   toast.$slots.default = [message];
   toast.$mount();
-  toast.$on('Close', onClose);
+  toast.$on('close', onClose);
   document.body.appendChild(toast.$el);
   return toast;
 }
@@ -13709,8 +13710,7 @@ new _vue.default({
   },
   methods: {
     showToast: function showToast() {
-      this.$toast('很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字', {
-        position: 'bottom',
+      this.$toast('很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字', {
         closeButton: {
           text: '关闭',
           callback: function callback()
