@@ -13453,6 +13453,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 var _default = {
   name: 'GuluToast',
   props: {
@@ -13542,10 +13544,8 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { ref: "toast", staticClass: "toast", class: _vm.toastClasses },
-    [
+  return _c("div", { staticClass: "wrapper", class: _vm.toastClasses }, [
+    _c("div", { ref: "toast", staticClass: "toast" }, [
       _c("div", { staticClass: "message" }, [_vm._t("default")], 2),
       _vm._v(" "),
       _c("span", { ref: "line", staticClass: "line" }),
@@ -13557,8 +13557,8 @@ exports.default = _default;
             [_vm._v("\n        " + _vm._s(_vm.closeButton.text) + "\n    ")]
           )
         : _vm._e()
-    ]
-  )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -13709,8 +13709,18 @@ new _vue.default({
     loading3: false
   },
   methods: {
-    showToast: function showToast() {
+    showToast1: function showToast1() {
+      this.showToast('top');
+    },
+    showToast2: function showToast2() {
+      this.showToast('middle');
+    },
+    showToast3: function showToast3() {
+      this.showToast('bottom');
+    },
+    showToast: function showToast(position) {
       this.$toast('很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字', {
+        position: position,
         closeButton: {
           text: '关闭',
           callback: function callback()

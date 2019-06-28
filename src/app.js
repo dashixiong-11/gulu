@@ -37,8 +37,18 @@ new Vue({
         loading3: false
     },
     methods: {
-        showToast() {
+        showToast1(){
+          this.showToast('top')
+        },
+        showToast2(){
+            this.showToast('middle')
+        },
+        showToast3(){
+            this.showToast('bottom')
+        },
+        showToast(position) {
             this.$toast('很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字', {
+                position,
                 closeButton: {
                     text: '关闭',
                     callback(/*toast*/) { //这里拿到组件实例
