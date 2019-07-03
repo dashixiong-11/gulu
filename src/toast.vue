@@ -17,13 +17,17 @@
         name: 'GuluToast',
         props: {
             autoClose: {
-                type: Boolean,
-                default: true
+                type: [Boolean,Number],
+                default: 5,
+                validator(value){
+                    return value === false || typeof value === 'number';
+                }
+
             },
-            autoCloseDelay: {
+/*            autoCloseDelay: {
                 type: Number,
                 default: 5
-            },
+            },*/
             closeButton: {
                 type: Object,
                 default() { //如果你的type是个对象，那么你的默认值就必须用函数return出来
@@ -47,15 +51,15 @@
           }
         },
         mounted() {
-            this.execAutoClose()
             this.updateStyles()
+            this.execAutoClose()
         },
         methods: {
             execAutoClose(){
                 if (this.autoClose) {
                     setTimeout(() => {
                         this.close()
-                    }, this.autoCloseDelay * 1000)
+                    }, this.autoClose * 1000)
                 }
             },
             updateStyles(){
@@ -74,7 +78,7 @@
             onClickClose(){
                 this.close()
                 if(this.closeButton && typeof this.closeButton.callback == 'function'){
-                    this.closeButton.callback(/*this*/)  //把组件通过this传过去
+                    this.closeButton.callback(this)  //把组件通过this传过去
                 }
             }
         },

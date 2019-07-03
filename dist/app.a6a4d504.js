@@ -13459,13 +13459,17 @@ var _default = {
   name: 'GuluToast',
   props: {
     autoClose: {
-      type: Boolean,
-      default: true
+      type: [Boolean, Number],
+      default: 5,
+      validator: function validator(value) {
+        return value === false || typeof value === 'number';
+      }
     },
-    autoCloseDelay: {
-      type: Number,
-      default: 5
-    },
+
+    /*            autoCloseDelay: {
+                    type: Number,
+                    default: 5
+                },*/
     closeButton: {
       type: Object,
       default: function _default() {
@@ -13490,8 +13494,8 @@ var _default = {
     }
   },
   mounted: function mounted() {
-    this.execAutoClose();
     this.updateStyles();
+    this.execAutoClose();
   },
   methods: {
     execAutoClose: function execAutoClose() {
@@ -13500,7 +13504,7 @@ var _default = {
       if (this.autoClose) {
         setTimeout(function () {
           _this.close();
-        }, this.autoCloseDelay * 1000);
+        }, this.autoClose * 1000);
       }
     },
     updateStyles: function updateStyles() {
@@ -13523,7 +13527,7 @@ var _default = {
       this.close();
 
       if (this.closeButton && typeof this.closeButton.callback == 'function') {
-        this.closeButton.callback();
+        this.closeButton.callback(this); //把组件通过this传过去
       }
     }
   },
@@ -13605,6 +13609,8 @@ var _toast = _interopRequireDefault(require("./toast"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var currentToast;
+
 function createToast(_ref) {
   var Vue = _ref.Vue,
       message = _ref.message,
@@ -13621,7 +13627,6 @@ function createToast(_ref) {
   return toast;
 }
 
-var currentToast;
 var _default = {
   install: function install(Vue, options) {
     Vue.prototype.$toast = function (message, toastOptions) {
@@ -13730,7 +13735,8 @@ new _vue.default({
             //toast.log()
             console.log('关闭');
           }
-        }
+        },
+        autoClose: 2
       });
     }
   }
@@ -13763,7 +13769,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49859" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52342" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

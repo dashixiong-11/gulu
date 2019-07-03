@@ -55,7 +55,8 @@ new Vue({
                         //toast.log()
                         console.log('关闭')
                     }
-                }
+                },
+                autoClose:2,
             })
         }
     }

@@ -1,4 +1,4 @@
-const expect = chai.expect
+const expect = chai.expect;
 import Vue from 'vue'
 import Row from '../src/row'
 import Col from '../src/col'
@@ -10,7 +10,7 @@ describe('Row',()=>{
     it('存在',()=>{
         expect(Row).to.exist
     })
-    it('接受gutter属性',()=>{
+    it('接受gutter属性',(done)=>{
         Vue.component('g-row',Row)
         Vue.component('g-col',Col)
         const div = document.createElement('div')
@@ -25,13 +25,16 @@ describe('Row',()=>{
             el:div
         })
         setTimeout(()=>{
-            const cols = vm.$el.querySelectorAll('.col')
-            expect(getComputedStyle(col[0]).paddingRight).tp.eq('10px')
-            expect(getComputedStyle(col[1]).paddingLeft).tp.eq('10px')
+            const row = vm.$el.querySelector('.row')
+            expect(getComputedStyle(row).marginRight).to.eq('-10px')
+            expect(getComputedStyle(row).marginLeft).to.eq('-10px')
+            const col = vm.$el.querySelectorAll('.col')
+            expect(getComputedStyle(col[0]).paddingRight).to.eq('10px')
+            expect(getComputedStyle(col[1]).paddingLeft).to.eq('10px')
             done()
+            vm.$el.remove()
+            vm.$destroy()
         })
-        vm.$el.remove()
-        vm.$destroy()
     })
     it('接收align属性', () => {
         const div = document.createElement('div')
@@ -42,7 +45,7 @@ describe('Row',()=>{
                 align: 'center'
             }
         }).$mount(div)
-        const useElement = vm.$el.querySelector('use')
+        const element = vm.$el
         expect(getComputedStyle(element).justifyContent).to.equal('center')
         div.remove()
         vm.$destroy()
