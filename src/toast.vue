@@ -24,10 +24,10 @@
                 }
 
             },
-/*            autoCloseDelay: {
-                type: Number,
-                default: 5
-            },*/
+            /*            autoCloseDelay: {
+                            type: Number,
+                            default: 5
+                        },*/
             closeButton: {
                 type: Object,
                 default() { //如果你的type是个对象，那么你的默认值就必须用函数return出来
@@ -46,9 +46,9 @@
             }
         },
         computed:{
-          toastClasses(){
-              return {[`position-${this.position}`]:true}
-          }
+            toastClasses(){
+                return {[`position-${this.position}`]:true}
+            }
         },
         mounted() {
             this.updateStyles()
@@ -72,9 +72,9 @@
                 this.$emit('close')
                 this.$destroy()
             },
-/*            log(){
-                ...    假如你需要通过callback 调用组件中的方法
-            },*/
+            /*            log(){
+                            ...    假如你需要通过callback 调用组件中的方法
+                        },*/
             onClickClose(){
                 this.close()
                 if(this.closeButton && typeof this.closeButton.callback == 'function'){

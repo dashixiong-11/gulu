@@ -16,12 +16,12 @@ export default {
             if(currentToast){
                 currentToast.close()
             }
-           currentToast =  createToast({
-               Vue,
-               message,
-               propsData:toastOptions,
-               onClose : () => { currentToast = null }
-           })
+            currentToast =  createToast({
+                Vue,
+                message,
+                propsData:toastOptions,
+                onClose : () => { currentToast = null }
+            })
         }
     }
 }

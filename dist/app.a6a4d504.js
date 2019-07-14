@@ -13715,12 +13715,15 @@ new _vue.default({
   },
   methods: {
     showToast1: function showToast1() {
+      console.log('1');
       this.showToast('top');
     },
     showToast2: function showToast2() {
+      console.log('2');
       this.showToast('middle');
     },
     showToast3: function showToast3() {
+      console.log('3');
       this.showToast('bottom');
     },
     showToast: function showToast(position) {
@@ -13769,7 +13772,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52342" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52301" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
