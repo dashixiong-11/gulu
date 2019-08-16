@@ -951,3 +951,40 @@
   cursor: pointer;
   flex-shrink: 0;
 }
+.tabs-head[data-v-7dbcfc] {
+  display: flex;
+  height: 40px;
+  justify-content: flex-start;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+.tabs-head > .line[data-v-7dbcfc] {
+  position: absolute;
+  bottom: 0;
+  border-bottom: blue 1px solid;
+  transition: all 0.5s;
+}
+.tabs-head > .actions-wrapper[data-v-7dbcfc] {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.tabs-item[data-v-b39b38] {
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.tabs-item.active[data-v-b39b38] {
+  color: blue;
+  font-weight: bold;
+}
+.tabs-item.disabled[data-v-b39b38] {
+  color: grey;
+  cursor: not-allowed;
+}
+.tabs-pane[data-v-d30d96] {
+  padding-top: 1em;
+}

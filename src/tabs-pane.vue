@@ -38,8 +38,8 @@
 
 <style scoped lang="scss">
     .tabs-pane{
+        padding-top:1em;
         &.active{
-            background: red;
         }
     }
 </style>

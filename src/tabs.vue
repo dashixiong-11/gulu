@@ -33,7 +33,20 @@
             }
         },
         mounted() {
-            this.eventBus.$emit('update:selected',this.selected)
+            if(this.$children.length === 0){
+                console && console.warn &&
+                console.warn('tabs 必须有一个组件:tabs-item和tabs-body')
+            }
+            this.$children.forEach((vm)=>{
+                if(vm.$options.name === 'GuluTabsHead'){
+                    vm.$children.forEach((childVm)=>{
+                        if(childVm.$options.name === 'GuluTabsItem' && childVm.name === this.selected){
+                            this.eventBus.$emit('update:selected',this.selected,childVm)
+                        }
+                    })
+                }
+
+            })
         }
     }
 
