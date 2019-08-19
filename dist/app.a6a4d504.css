@@ -988,3 +988,14 @@
 .tabs-pane[data-v-d30d96] {
   padding-top: 1em;
 }
+.popover[data-v-6761eb] {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.content-wrapper[data-v-6761eb] {
+  position: absolute;
+  border: 1px solid red;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  transform: translateY(-100%);
+}
