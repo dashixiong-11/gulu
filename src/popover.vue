@@ -1,5 +1,5 @@
 <template>
-    <div class="popover" @click="onClick" ref="popover">
+    <div class="popover"  ref="popover">
         <div class="content-wrapper" ref="contentWrapper" v-show="visible" :class="{[`position-${position}`]:true}">
             <slot name="content"></slot>
         </div>
@@ -17,6 +17,22 @@
                 visible: false,
             }
         },
+        mounted(){
+            if(this.trigger === 'click'){
+             this.$refs.popover.addEventListener('click',this.onClick)
+            }else {
+                this.$refs.popover.addEventListener('mouseenter',this.open)
+                this.$refs.popover.addEventListener('mouseleave',this.close)
+            }
+        },
+        destroyed(){
+            if(this.trigger === 'click'){
+                this.$refs.popover.removeEventListener('click',this.onClick)
+            }else {
+                this.$refs.popover.removeEventListener('mouseenter',this.open)
+                this.$refs.popover.removeEventListener('mouseleave',this.close)
+            }
+        },
         props:{
             position:{
                 type:String,
@@ -24,6 +40,13 @@
                 validator(value){
                     return ['top','left','right','bottom'].indexOf(value) >= 0
 
+                }
+            },
+            trigger:{
+                type:String,
+                default: 'click',
+                validator(value){
+                    return ['click','hover'].indexOf(value) >= 0
                 }
             }
         },
@@ -117,6 +140,7 @@
             transform: translateY(-100%);
             margin-top: -10px;
             &::before, &::after {
+                border-bottom:none;
                 left: 10px;
             }
 
@@ -133,6 +157,7 @@
         &.position-bottom{
             margin-top: 10px;
             &::before, &::after {
+                border-top: none;
                 left: 10px;
             }
 
@@ -150,6 +175,7 @@
             transform: translateX(-100%);
             margin-left: -10px;
             &::before, &::after {
+                border-right: none;
                 transform: translateY(-50%);
                 top:50%;
             }
@@ -167,6 +193,7 @@
         &.position-right{
             margin-left: 10px;
             &::before, &::after {
+                border-left: none;
                 transform: translateY(-50%);
                 top:50%;
             }
