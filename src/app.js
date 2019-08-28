@@ -49,7 +49,8 @@ Vue.use(plugin)
 new Vue({
   el:'#app',
   data:{
-    selectedTab:'dz'
+    selectedTab:'dz',
+    selected:'2'
   },
   methods: {
     showToast1(){
