@@ -1,6 +1,6 @@
 <template>
     <div class="collapseitem">
-        <div class="title" @click="toggle"> {{single}}{{title}}</div>
+        <div class="title" @click="toggle"> {{title}}</div>
         <div class="content" v-if="open">
             <slot></slot>
         </div>
@@ -13,7 +13,6 @@
         data() {
             return {
                 open: false,
-                single:false
             }
         },
         props: {
@@ -27,29 +26,21 @@
             }
         },
         mounted() {
-            this.eventBus.$on('update:selected', name => {
-                if (name !== this.name) {
-                    if(this.single){
-                        this.close()
-                    }
+            this.eventBus.$on('update:selected', (names) => {
+                if (names.indexOf(this.name)>=0) {
+                    this.open = true
                 }else {
-                    this.show()
+                        this.open = false
                 }
             })
         },
         methods: {
             toggle() {
                 if (this.open) {
-                    this.open = false
+                    this.eventBus.$emit('update:removeSelected', this.name)
                 } else {
-                    this.eventBus.$emit('update:selected', this.name)
+                    this.eventBus.$emit('update:addSelected', this.name)
                 }
-            },
-            close() {
-                this.open = false
-            },
-            show(){
-                this.open = true
             }
         },
         inject: ['eventBus']

@@ -50,7 +50,10 @@ new Vue({
   el:'#app',
   data:{
     selectedTab:'dz',
-    selected:'2'
+    selected:['2']
+  },
+  mounted(){
+
   },
   methods: {
     showToast1(){
