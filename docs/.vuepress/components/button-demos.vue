@@ -3,8 +3,7 @@
         <g-button>默认按钮</g-button>
         <g-button icon="setting">设置</g-button>
         <g-button :loading="true">加载中</g-button>
-
-        <pre> <code>{{content}}</code> </pre>
+        <pre><code>{{content}}</code></pre>
     </div>
 </template>
 
@@ -20,7 +19,7 @@
         <g-button>默认按钮</g-button>
         <g-button icon="setting">设置</g-button>
         <g-button :loading="true">加载中</g-button>
-                `
+                `.replace(/\t+| +/g,'').trim()
             }
         }
     }

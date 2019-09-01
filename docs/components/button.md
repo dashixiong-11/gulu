@@ -1,9 +1,10 @@
 ---
-title:'按钮'
+title:'Button'
 ---
 # 按钮
 
 如何使用
 
-<button-demos></button-demos>
-
+<ClientOnly>
+   <button-demos></button-demos>
+</ClientOnly>

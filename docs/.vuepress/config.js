@@ -1,5 +1,6 @@
 module.exports = {
     title: 'GUI',
+    base:'/gulu/',
     description: '一个不知道好不好用的UI',
     themeConfig: {
         nav: [
@@ -18,7 +19,15 @@ module.exports = {
             },
             {
                 title: '组件',
-                children: ['/components/button']
+                children: [
+                    '/components/button',
+                    '/components/grid',
+                    '/components/input',
+                    '/components/layout',
+                    '/components/popover',
+                    '/components/tabs',
+                    '/components/toast',
+                ]
             }
         ]
     }
