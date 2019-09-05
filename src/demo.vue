@@ -1,6 +1,6 @@
 <template>
     <div style="padding:100px;">
-        <g-cascader :source="source"></g-cascader>
+        <g-cascader :source="source" popover-height="200px" :selected="selected"></g-cascader>
     </div>
 </template>
 
@@ -11,6 +11,7 @@
         components: { gCascader: Cascader },
         data() {
             return {
+                selected:[],
                 source: [
                     {
                         name: '浙江',
