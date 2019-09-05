@@ -35,6 +35,7 @@
 </script>
 
 <style lang='scss' scoped>
+    @import "var";
     @keyframes spin {
         0% {
             transform: rotate(0deg);
@@ -43,14 +44,6 @@
             transform: rotate(360deg);
         }
     }
-    $button-height: 32px;
-    $button-bg: white;
-    $font-size: 14px;
-    $button-active-bg: #eee;
-    $border-radius: 4px;
-    $color: #333;
-    $border-color: #999;
-    $border-color-hover: #666;
     .g-button {
         display: inline-flex;
         justify-content: center;
@@ -63,42 +56,15 @@
         font-size: $font-size;
         height: $button-height;
         vertical-align: middle;
-
-        .icon {
-            order: 1;
-            margin-right: .1em;
-        }
-
-        .content {
-            order: 2;
-        }
-
-        &:hover {
-            border-color: $border-color-hover;
-        }
-
-        &:active {
-            background-color: $button-active-bg;
-        }
-
-        &:focus {
-            outline: none;
-        }
-
-        .loading {
-            animation: spin 1s infinite linear;
-        }
+        .icon { order: 1; margin-right: .1em; }
+        .content {order: 2;}
+        &:hover {border-color: $border-color-hover;}
+        &:active {background-color: $button-active-bg;}
+        &:focus {outline: none;}
+        .loading {animation: spin 1s infinite linear;}
     }
-
     .icon-right {
-        .icon {
-            order: 2;
-            margin-left: .1em;
-            margin-right: 0;
-        }
-
-        .content {
-            order: 1;
-        }
+        .icon {order: 2;margin-left: .1em;margin-right: 0;}
+        .content {order: 1;}
     }
 </style>

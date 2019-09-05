@@ -1,4 +1,4 @@
-import Vue from 'vue'
+/*import Vue from 'vue'
 import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
@@ -73,7 +73,7 @@ new Vue({
         position,
         closeButton: {
           text: '关闭',
-          callback(/*toast*/) { //这里拿到组件实例
+          callback(/!*toast*!/) { //这里拿到组件实例
             //toast.log()
             console.log('关闭')
           }
@@ -82,5 +82,14 @@ new Vue({
       })
     }
   }
-})
+})*/
+import Vue from 'vue'
+import Demo from './demo.vue'
+
+Vue.config.productionTip = false
+
+new Vue({
+    render: h => h(Demo),
+}).$mount('#app')
+
 
