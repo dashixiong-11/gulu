@@ -1,9 +1,12 @@
 <template>
     <div class="cascader">
+        <div>
+            {{selected}}
+        </div>
         <div class="trigger" @click="popoverVisible = !popoverVisible"></div>
         <slot></slot>
         <div class="popover-wrapper" v-if="popoverVisible">
-                <g-cascader-items :items="source" class="popover" :height="popoverHeight" :selected="selected"></g-cascader-items>
+                <g-cascader-items :items="source"  class="popover" :height="popoverHeight" @update:selected="upDateSelected" :selected="selected"></g-cascader-items>
         </div>
     </div>
 </template>
@@ -28,11 +31,16 @@
                 default:() => []
             }
         },
+        methods:{
+            upDateSelected(newSelected){
+                this.$emit('updata:selected',newSelected)
+            }
+        },
         data(){
             return {
-                popoverVisible:false
+                popoverVisible:false,
             }
-        }
+        },
     }
 </script>
 

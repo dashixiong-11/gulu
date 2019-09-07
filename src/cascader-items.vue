@@ -1,12 +1,12 @@
 <template>
     <div class="cascaderItem" :style="{ height:height }">
         <div class="left">
-            <div class="label" v-for="(item,index) in items" :key="index" @click="xxx(item)">{{item.name}}
-                <span v-if="item.children"> <Icon name="right"></Icon> </span>
+            <div class="label" v-for="(item,index) in items" :key="index" @click="onClickLabel(item)">{{item.name}}
+                <span v-if="item.children"> <Icon name="right"></Icon></span>
             </div>
         </div>
         <div class="right" v-if="rightItem">
-            <cascader-items :items="rightItem" :height="height" :selected="selected"></cascader-items>
+            <cascader-items :items="rightItem" :level="level+1"  :height="height" :selected="selected" @update:selected="upDateSelected"></cascader-items>
         </div>
     </div>
 </template>
@@ -29,23 +29,29 @@
             },
             level:{
                 type:Number,
-                default: 0
-            }
+                default:0
+            },
         },
         data(){
             return {
-                leftSelected:null
+                leftSelected:null,
             }
         },
         methods:{
-            xxx(e){
-                this.leftSelected = e
+            onClickLabel(item){
+                let copy = JSON.parse(JSON.stringify(this.selected))
+                copy[this.level] = item
+                this.$emit('update:selected',copy)
+            },
+            upDateSelected(newSelected){
+                this.$emit('update:selected',newSelected)
             }
         },
         computed:{
             rightItem(){
-                if(this.leftSelected && this.leftSelected.children){
-                    return this.leftSelected.children
+                let currentSelected = this.selected[this.level]
+                if(currentSelected && currentSelected.children){
+                    return currentSelected.children
                 }else{
                     return null
                 }

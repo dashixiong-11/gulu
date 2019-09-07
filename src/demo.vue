@@ -1,6 +1,6 @@
 <template>
     <div style="padding:100px;">
-        <g-cascader :source="source" popover-height="200px" :selected="selected"></g-cascader>
+        <g-cascader :source="source" popover-height="200px" :selected="selected" @updata:selected="selected = $event"></g-cascader>
     </div>
 </template>
 
