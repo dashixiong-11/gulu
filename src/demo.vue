@@ -13,6 +13,13 @@
         return new Promise( (resolve,reject)=> {
             setTimeout(()=>{
                 let result = db.filter( item =>   item.parent_id === parentId)
+                result.forEach( node => {
+                    if(db.filter(item => item.parent_id === node.id).length>0){
+                        node.isLeaf = false
+                    }else{
+                        node.isLeaf = true
+                    }
+                })
                 resolve(result)
             },300)
         } )

@@ -1,12 +1,15 @@
 <template>
     <div class="cascaderItem" :style="{ height:height }">
         <div class="left">
-            <div class="label" v-for="(item,index) in items" :key="index" @click="onClickLabel(item)">{{item.name}}
-                <span v-if="item.children"> <Icon name="right"></Icon></span>
+            <div class="label" v-for="(item,index) in items" :key="index" @click="onClickLabel(item)">
+                <span class="name">
+                {{item.name}}
+                </span>
+                 <Icon class="icon" v-if="rightArrowVisible(item)" name="right"></Icon>
             </div>
         </div>
         <div class="right" v-if="rightItem">
-            <cascader-items :items="rightItem" :level="level+1"  :height="height" :selected="selected" @update:selected="upDateSelected"></cascader-items>
+            <cascader-items :items="rightItem" :load-data="loadData" :level="level+1"  :height="height" :selected="selected" @update:selected="upDateSelected"></cascader-items>
         </div>
     </div>
 </template>
@@ -31,6 +34,9 @@
                 type:Number,
                 default:0
             },
+            loadData:{
+                type:Function
+            }
         },
         methods:{
             onClickLabel(item){
@@ -41,6 +47,9 @@
             },
             upDateSelected(newSelected){
                 this.$emit('update:selected',newSelected)
+            },
+            rightArrowVisible(item){
+                return this.loadData? !item.isLeaf : item.children
             }
         },
         computed:{
@@ -64,9 +73,15 @@
         .label{
             display: flex;
             align-items: center;
-            padding: .3em 1em;
-            >span{
-                margin-left: .5em;
+            padding: .4em 1em;
+            &:hover{
+                background-color: $grey;
+            }
+            >.name{
+                user-select: none;
+            }
+            >.icon{
+                margin-left: auto;
                 transform:scale(0.7);
             }
         }

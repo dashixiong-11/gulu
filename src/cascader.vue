@@ -3,7 +3,7 @@
         <div class="trigger" @click="open">{{result || '&nbsp'}}</div>
         <slot></slot>
         <div class="popover-wrapper" v-if="popoverVisible">
-                <g-cascader-items :items="source"  class="popover" :height="popoverHeight" @update:selected="upDateSelected" :selected="selected"></g-cascader-items>
+                <g-cascader-items :items="source"  :load-data="loadData" class="popover" :height="popoverHeight" @update:selected="upDateSelected" :selected="selected"></g-cascader-items>
         </div>
     </div>
 </template>
@@ -77,7 +77,9 @@
                     toUpdate.children = result
                     this.$emit('update:source',copy)
                 }
-                this.loadData(lastItem,upDateSelected)
+                if(!lastItem.isLeaf){
+                  this.loadData && this.loadData(lastItem,upDateSelected)
+                }
             },
             open(){
                 this.popoverVisible = !this.popoverVisible
