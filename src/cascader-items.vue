@@ -74,6 +74,7 @@
             display: flex;
             align-items: center;
             padding: .4em 1em;
+            white-space: nowrap;
             &:hover{
                 background-color: $grey;
             }

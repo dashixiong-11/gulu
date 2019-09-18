@@ -1,6 +1,6 @@
 <template>
-    <div class="cascader">
-        <div class="trigger" @click="open">{{result || '&nbsp'}}</div>
+    <div class="cascader" v-click-outside="close">
+        <div class="trigger" @click="toggle">{{result || '&nbsp'}}</div>
         <slot></slot>
         <div class="popover-wrapper" v-if="popoverVisible">
                 <g-cascader-items :items="source"  :load-data="loadData" class="popover" :height="popoverHeight" @update:selected="upDateSelected" :selected="selected"></g-cascader-items>
@@ -10,12 +10,14 @@
 
 <script>
     import CascaderItems from './cascader-items'
+    import clickOutside from './click-outside'
 
     export default {
         name: "GuluCascader",
         components: {
             gCascaderItems: CascaderItems
         },
+        directives:{ clickOutside },
         props: {
             source: {
                 type: Array
@@ -37,6 +39,19 @@
             }
         },
         methods:{
+            open(){
+                this.popoverVisible = true
+            },
+            close(){
+                this.popoverVisible = false
+            },
+            toggle(){
+                if(this.popoverVisible === true){
+                    this.close()
+                }else {
+                    this.open()
+                }
+            },
             upDateSelected(newSelected){
                 this.$emit('update:selected',newSelected)
                 let lastItem = newSelected[newSelected.length - 1]
@@ -81,9 +96,6 @@
                   this.loadData && this.loadData(lastItem,upDateSelected)
                 }
             },
-            open(){
-                this.popoverVisible = !this.popoverVisible
-            }
         },
         computed:{
             result(){
@@ -97,6 +109,7 @@
     @import "var";
     .cascader {
         position: relative;
+        display: inline-flex;
         .trigger {
             display: inline-flex;
             height: $input-height;
