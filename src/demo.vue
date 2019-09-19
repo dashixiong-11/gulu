@@ -1,12 +1,17 @@
 <template>
     <div style="padding:100px;">
         <g-cascader :source.sync="source" popover-height="200px" :selected.sync="selected"  :load-data="loadData"></g-cascader>
+        <button @click="xxx">123</button>
     </div>
 </template>
 
 <script>
     import Cascader from './cascader'
     import db from './db'
+    import Input from './input'
+    import plugin from './plugin'
+    import Vue from 'vue'
+    Vue.use(plugin)
 
     
     function find(parentId = 0) {
@@ -26,11 +31,11 @@
 
     }
     export default {
-        components: { gCascader: Cascader },
+        components: { gCascader: Cascader,gInput:Input },
         data() {
             return {
                 selected:[],
-                source:[]
+                source:[],
             }
         },
         created() {
@@ -44,6 +49,9 @@
                     callback(result)
                 })
             },
+            xxx(){
+                this.$toast('xxxx')
+            }
         }
     }
 </script>
