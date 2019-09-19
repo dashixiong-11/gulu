@@ -3,7 +3,9 @@
         <div class="trigger" @click="toggle">{{result || '&nbsp'}}</div>
         <slot></slot>
         <div class="popover-wrapper" v-if="popoverVisible">
-                <g-cascader-items :items="source"  :load-data="loadData" class="popover" :height="popoverHeight" @update:selected="upDateSelected" :selected="selected"></g-cascader-items>
+            <g-cascader-items :items="source" :load-data="loadData" class="popover" :height="popoverHeight"
+                              :loading-item="loadingItem"
+                              @update:selected="upDateSelected" :selected="selected"></g-cascader-items>
         </div>
     </div>
 </template>
@@ -17,67 +19,69 @@
         components: {
             gCascaderItems: CascaderItems
         },
-        directives:{ clickOutside },
+        directives: {clickOutside},
         props: {
             source: {
                 type: Array
             },
-            popoverHeight:{
-                type:String
+            popoverHeight: {
+                type: String
             },
-            selected:{
-                type:Array,
-                default:() => []
+            selected: {
+                type: Array,
+                default: () => []
             },
-            loadData:{
-                type:Function
-            }
+            loadData: {
+                type: Function
+            },
         },
-        data(){
+        data() {
             return {
-                popoverVisible:false,
+                popoverVisible: false,
+                loadingItem: {}
             }
         },
-        methods:{
-            open(){
+        methods: {
+            open() {
                 this.popoverVisible = true
             },
-            close(){
+            close() {
                 this.popoverVisible = false
             },
-            toggle(){
-                if(this.popoverVisible === true){
+            toggle() {
+                if (this.popoverVisible === true) {
                     this.close()
-                }else {
+                } else {
                     this.open()
                 }
             },
-            upDateSelected(newSelected){
-                this.$emit('update:selected',newSelected)
+            upDateSelected(newSelected) {
+                this.$emit('update:selected', newSelected)
                 let lastItem = newSelected[newSelected.length - 1]
-                let simplest = (children,id) => {
-                    return children.filter((item)=> item.id === id )[0]
+                let simplest = (children, id) => {
+                    return children.filter((item) => item.id === id)[0]
                 }
-                let complex = (children,id) => {
+                let complex = (children, id) => {
                     let noChildren = []
                     let hasChildren = []
-                    children.forEach( item => {
-                        if(item.children){
+                    children.forEach(item => {
+                        if (item.children) {
                             hasChildren.push(item)
-                        }else {
+                        } else {
                             noChildren.push(item)
                         }
                     })
-                    let found = simplest(noChildren,id)
-                    if(found){
+                    let found = simplest(noChildren, id)
+                    if (found) {
                         return found
-                    }else {
-                        found = simplest(hasChildren,id)
-                        if(found){return found}
-                        else{
-                            for (let i=0; i<hasChildren.length; i++){
-                               found =  complex(hasChildren[i].children,id)
-                                if(found){
+                    } else {
+                        found = simplest(hasChildren, id)
+                        if (found) {
+                            return found
+                        } else {
+                            for (let i = 0; i < hasChildren.length; i++) {
+                                found = complex(hasChildren[i].children, id)
+                                if (found) {
                                     return found
                                 }
                             }
@@ -86,20 +90,22 @@
 
                     }
                 }
-                let upDateSelected = (result)=>{
-                    let copy = JSON.parse( JSON.stringify(this.source) )
-                    let toUpdate = complex(copy,lastItem.id)
+                let upDateSource = (result) => {
+                    this.loadingItem = {}
+                    let copy = JSON.parse(JSON.stringify(this.source))
+                    let toUpdate = complex(copy, lastItem.id)
                     toUpdate.children = result
-                    this.$emit('update:source',copy)
+                    this.$emit('update:source', copy)
                 }
-                if(!lastItem.isLeaf){
-                  this.loadData && this.loadData(lastItem,upDateSelected)
+                if (!lastItem.isLeaf && this.loadData) {
+                    this.loadData(lastItem, upDateSource)
+                    this.loadingItem = lastItem
                 }
             },
         },
-        computed:{
-            result(){
-                return this.selected.map( item =>  item.name).join('/')
+        computed: {
+            result() {
+                return this.selected.map(item => item.name).join('/')
             }
         }
     }
@@ -107,20 +113,24 @@
 
 <style scoped lang="scss">
     @import "var";
+
     .cascader {
         position: relative;
         display: inline-flex;
+
         .trigger {
             display: inline-flex;
             height: $input-height;
             align-items: center;
-            padding:0 1em;
+            padding: 0 1em;
             border: 1px solid $border-color;
             border-radius: $border-radius;
             height: 32px;
             min-width: 10em;
         }
-        .popover-wrapper{
+
+        .popover-wrapper {
+            z-index: 1;
             @extend .box-shadow;
             margin-top: 8px;
             position: absolute;
