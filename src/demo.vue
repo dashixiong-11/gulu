@@ -1,12 +1,19 @@
 <template>
     <div style="padding:100px;">
         <g-cascader :source.sync="source" popover-height="200px" :selected.sync="selected"  :load-data="loadData"></g-cascader>
-        <button @click="xxx">123</button>
+        <g-popover>
+            <template slot="content">
+                <div>内容</div>
+            </template>
+            <g-button>点我</g-button>
+        </g-popover>
     </div>
 </template>
 
 <script>
     import Cascader from './cascader'
+    import Popover from './popover'
+    import Button from './button'
     import db from './db'
     import Input from './input'
     import plugin from './plugin'
@@ -31,7 +38,7 @@
 
     }
     export default {
-        components: { gCascader: Cascader,gInput:Input },
+        components: { gCascader: Cascader,gInput:Input,gPopover:Popover,gButton:Button },
         data() {
             return {
                 selected:[],
