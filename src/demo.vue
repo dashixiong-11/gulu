@@ -1,6 +1,6 @@
 <template>
    <div style="padding:100px;" >
-      <g-slides :selected="selected">
+      <g-slides :selected.sync="selected">
          <g-slides-item name="1">
             <div class="box">1</div>
          </g-slides-item>
@@ -29,9 +29,6 @@
          }
       },
       created() {
-         setTimeout(()=>{
-            this.selected = '2'
-         },3000)
       },
       methods: {}
    }
@@ -48,9 +45,12 @@
       font-size: 14px;
    }
    .box{
-      width: 200px;
+      width: 100%;
       height: 200px;
       background: #ddd;
-      border:1px solid red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
    }
 </style>
