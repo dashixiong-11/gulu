@@ -10,11 +10,11 @@
          </div>
       </div>
       <div class="g-slides-dots">
-         <span @click="select(selectedIndex - 1)">
+         <span @click="select(selectedIndex - 1)" class="left">
             <g-icon name="left"></g-icon>
          </span>
-         <span v-for="n in childrenLength" :key="n" :class="{active: selectedIndex === n-1}" @click="select(n-1)" >{{n}}</span>
-         <span @click="select(selectedIndex + 1)">
+         <span v-for="n in childrenLength" :key="n" :data-index="n-1" :class="{active: selectedIndex === n-1}" @click="select(n-1)" >{{n}}</span>
+         <span @click="select(selectedIndex + 1)" class="right">
             <g-icon name="right"></g-icon>
          </span>
       </div>
@@ -34,6 +34,10 @@
          autoPlay: {
             type: Boolean,
             default: true
+         },
+         autoPlayDelay:{
+            type:Number,
+            default: 3000
          }
       },
       data(){
@@ -47,7 +51,9 @@
       },
       mounted() {
          this.updateChildren()
-         this.playAutomatically()
+         if(this.autoPlay){
+            this.playAutomatically()
+         }
          this.childrenLength = this.items.length
       },
       computed:{
@@ -106,9 +112,9 @@
                if(index === this.names.length){ index = 0 }
                let newIndex = index + 1
                this.select(newIndex)
-               this.timerId = setTimeout(run,3000)
+               this.timerId = setTimeout(run,this.autoPlayDelay)
             }
-            this.timerId = setTimeout(run,3000)
+            this.timerId = setTimeout(run,this.autoPlayDelay)
          },
          pause(){
             window.clearTimeout(this.timerId)

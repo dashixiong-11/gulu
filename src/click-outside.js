@@ -7,8 +7,6 @@ document.addEventListener('click',(e)=>{
             item.callback()
         }
     })
-
-
 })
 
 let callbacks = []
