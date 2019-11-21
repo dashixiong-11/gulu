@@ -1,5 +1,7 @@
 <template>
-   <div class="g-slides" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave"
+   <div class="g-slides"
+        @mouseenter="onMouseEnter"
+        @mouseleave="onMouseLeave"
         @touchstart="onTouchStart"
         @touchmove="onTouchMove"
         @touchend="onTouchEnd"
@@ -58,14 +60,14 @@
       },
       computed:{
          selectedIndex(){
-            let index = this.names.indexOf(this.selected)
+            let index = this.names.indexOf(this.selected)//外面不传或者瞎几把传都是默认选中第一张
             return index === -1? 0 : index
          },
          names(){
             return this.items.map( vm => vm.name)
          },
          items(){
-            return  this.$children.filter( vm =>  vm.$options.name === 'GuluSlidesItem')
+            return  this.$children.filter( vm =>  vm.$options.name === 'GuluSlidesItem') //返回所有子组件
          }
       },
       methods: {
@@ -79,15 +81,13 @@
             this.pause()
             this.startTouch = e.touches[0]
          },
-         onTouchMove(){
-         },
          onTouchEnd(e){
             let endTouch = e.changedTouches[0]
             let {clientX:x1,clientY:y1} = this.startTouch
             let {clientX:x2,clientY:y2} = endTouch
             let distance = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2))
             let deltaY = Math.abs(y2 - y1)
-            let rate = distance / deltaY
+            let rate = distance / deltaY         //通过对比touch起始点到结束点的距离 与 结束点到X轴的距离 之比来判断用户是上下滑动还是左右滑动
             if(rate>2){
                if(x2 > x1){
                   this.select(this.selectedIndex - 1)
@@ -99,7 +99,7 @@
                this.playAutomatically()
             })
          },
-         select(newIndex){
+         select(newIndex){ //把新的selected传到外面去
             if(newIndex === -1) { newIndex = this.names.length - 1 }
             if(newIndex === this.names.length){ newIndex = 0}
             this.lastSelectedIndex = this.selectedIndex
@@ -124,7 +124,7 @@
             let first = this.items[0]
             return  this.selected || first.name
          },
-         updateChildren() {
+         updateChildren() {//更新子组件的 selected
             let selected = this.getSelected()
             this.items.forEach(vm => {
                let reverse = this.selectedIndex > this.lastSelectedIndex ? false : true  //在这边修改子组件的reverse 有可能并不会马上生效

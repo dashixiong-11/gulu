@@ -30,8 +30,6 @@
 </script>
 
 <style scoped lang="scss">
-   .slides-item{
-   }
    .slide-leave-active{
       position:absolute;
       left: 0; top: 0;
