@@ -35,7 +35,7 @@
 </script>
 
 <style lang='scss' scoped>
-    @import "var";
+    @import "../var";
     .g-button {
         display: inline-flex;
         justify-content: center;

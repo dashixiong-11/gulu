@@ -14,9 +14,9 @@
    </div>
 </template>
 <script>
-   import Slides from './slides'
+   import Slides from './slides/slides'
    import plugin from './plugin'
-   import SlidesItem from './slides-item'
+   import SlidesItem from './slides/slides-item'
    import Vue from 'vue'
 
    Vue.use(plugin)

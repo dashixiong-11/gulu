@@ -12,7 +12,7 @@
 
 <script>
     import CascaderItems from './cascader-items'
-    import clickOutside from './click-outside'
+    import clickOutside from '../click-outside'
 
     export default {
         name: "GuluCascader",

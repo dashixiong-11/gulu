@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="添加测试用例">
+    <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/fixtures/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/popover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/button/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cascader-items.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/cascader/cascader-items.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/cascader/cascader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/col.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/col.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collapse-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/collapse/collapse-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collapse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/collapse/collapse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/row.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid/row.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/sider.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slides-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/slides/slides-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slides.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/slides/slides.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabs-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs-body.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabs-head.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs-head.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabs-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabs-pane.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs-pane.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/row.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/row.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/tabs-item.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tabs-item.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/tabs.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tabs.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/button.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/button.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/popover.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/popover.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/slide.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/slide.spec.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,25 +42,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/slides.vue">
+        <entry file="file://$PROJECT_DIR$/src/slides/slides.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="70" column="9" selection-start-line="69" selection-start-column="97" selection-end-line="70" selection-end-column="10" />
+            <state relative-caret-position="483">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/tests/unit/button.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+            <state relative-caret-position="84">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/slides-item.vue">
+        <entry file="file://$PROJECT_DIR$/tests/unit/slide.spec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="632">
+              <caret line="194" column="2" selection-start-line="194" selection-start-column="2" selection-end-line="194" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/button/button.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/slides/slides-item.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="672">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
@@ -56,7 +104,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cascader-items.vue">
+        <entry file="file://$PROJECT_DIR$/src/cascader/cascader-items.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
@@ -74,7 +122,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/footer.vue">
+        <entry file="file://$PROJECT_DIR$/src/layout/footer.vue">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -108,11 +156,13 @@
       <find>keyf</find>
       <find>demo</find>
       <find>des</find>
+      <find>import</find>
+      <find>@/</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/test</dir>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -124,8 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tabs-head.vue" />
-        <option value="$PROJECT_DIR$/src/tabs.vue" />
         <option value="$PROJECT_DIR$/test/button.test.js" />
         <option value="$PROJECT_DIR$/test/popover.test.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -163,18 +211,20 @@
         <option value="$PROJECT_DIR$/src/plugin.js" />
         <option value="$PROJECT_DIR$/tests/unit/example.spec.js" />
         <option value="$PROJECT_DIR$/src/svg.js" />
-        <option value="$PROJECT_DIR$/tests/unit/button.spec.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/tests/unit/popover.spec.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/_var.scss" />
         <option value="$PROJECT_DIR$/src/demo.vue" />
         <option value="$PROJECT_DIR$/src/cascader-items.vue" />
         <option value="$PROJECT_DIR$/src/click-outside.js" />
-        <option value="$PROJECT_DIR$/tests/unit/slide.spec.js" />
         <option value="$PROJECT_DIR$/src/slides-item.vue" />
-        <option value="$PROJECT_DIR$/src/slides.vue" />
         <option value="$PROJECT_DIR$/src/popover.vue" />
+        <option value="$PROJECT_DIR$/src/slides.vue" />
+        <option value="$PROJECT_DIR$/src/button/button.vue" />
+        <option value="$PROJECT_DIR$/tests/unit/popover.spec.js" />
+        <option value="$PROJECT_DIR$/tests/unit/button.spec.js" />
+        <option value="$PROJECT_DIR$/src/slides/slides.vue" />
+        <option value="$PROJECT_DIR$/tests/unit/slide.spec.js" />
       </list>
     </option>
   </component>
@@ -211,6 +261,23 @@
             <path>
               <item name="gulu" type="b2602c69:ProjectViewProjectNode" />
               <item name="gulu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gulu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gulu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gulu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gulu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="button" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gulu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gulu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="slides" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gulu" type="b2602c69:ProjectViewProjectNode" />
@@ -258,10 +325,11 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests/fixtures" />
-      <recent name="$PROJECT_DIR$/tests/unit" />
-      <recent name="$PROJECT_DIR$/docs/.vuepress/components" />
-      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/src/slides" />
+      <recent name="$PROJECT_DIR$/src/layout" />
+      <recent name="$PROJECT_DIR$/src/grid" />
+      <recent name="$PROJECT_DIR$/src/collapse" />
+      <recent name="$PROJECT_DIR$/src/cascader" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -366,7 +434,7 @@
       <workItem from="1574178982438" duration="366000" />
       <workItem from="1574179367352" duration="554000" />
       <workItem from="1574235557801" duration="31000" />
-      <workItem from="1576291010325" duration="490000" />
+      <workItem from="1576291010325" duration="4104000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -571,11 +639,32 @@
       <option name="project" value="LOCAL" />
       <updated>1573917870424</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="把 destroyed改为 beforeDestriy">
+      <created>1576291850011</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1576291850012</updated>
+    </task>
+    <task id="LOCAL-00031" summary="把 db.js 移动到 fixtures 下">
+      <created>1576291884766</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1576291884766</updated>
+    </task>
+    <task id="LOCAL-00032" summary="把button相关组件移动到 src/button 下">
+      <created>1576292248969</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1576292248969</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223492000" />
+    <option name="totallyTimeSpent" value="227106000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,6 +677,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24242425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -689,9 +779,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="一次测试提交" />
-    <MESSAGE value="添加tabs相关组件" />
-    <MESSAGE value="解决了tabs组件 位置位置影响 line 的bug&#10;添加popover并且解决了一些bug" />
     <MESSAGE value="完成 支持四个position" />
     <MESSAGE value="使用表驱动编程重构代码" />
     <MESSAGE value="跳过了一个不知道如何实现的测试用例" />
@@ -714,7 +801,10 @@
     <MESSAGE value="解决 控制动画方向不及时 bug  解决 无缝bug 添加mouseEnter 暂停功能" />
     <MESSAGE value="支持手机滑动 ，上下页" />
     <MESSAGE value="添加测试用例" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加测试用例" />
+    <MESSAGE value="把 destroyed改为 beforeDestriy" />
+    <MESSAGE value="把 db.js 移动到 fixtures 下" />
+    <MESSAGE value="把button相关组件移动到 src/button 下" />
+    <option name="LAST_COMMIT_MESSAGE" value="把button相关组件移动到 src/button 下" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/dist/index.html">
@@ -871,13 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/button.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -889,14 +972,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cascader.vue">
+    <entry file="file://$PROJECT_DIR$/src/cascader/cascader.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/button-group.vue">
+    <entry file="file://$PROJECT_DIR$/src/button/button-group.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="9" selection-start-column="9" selection-end-column="9" />
@@ -954,16 +1037,6 @@
     <entry file="file://$PROJECT_DIR$/tests/tabs-body.test.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/button.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-            <element signature="e#156#189#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/toast.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -985,35 +1058,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/slide.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="161" column="7" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-            <element signature="e#156#189#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/slides.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="70" column="9" selection-start-line="69" selection-start-column="97" selection-end-line="70" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/slides-item.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -1026,7 +1074,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cascader-items.vue">
+    <entry file="file://$PROJECT_DIR$/src/cascader/cascader-items.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
@@ -1040,7 +1088,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/footer.vue">
+    <entry file="file://$PROJECT_DIR$/src/layout/footer.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/demo.vue">
@@ -1050,6 +1098,47 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/button/button.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/slides/slides-item.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/slide.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="194" column="2" selection-start-line="194" selection-start-column="2" selection-end-line="194" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/button.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/slides/slides.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>

@@ -2,7 +2,7 @@ import chai, {expect} from 'chai'
 import {mount, shallowMount} from '@vue/test-utils'
 // mount : 完成的渲染，包括子组件
 // shallowMount : 只渲染当前组件，如果有子组件就会虚构一个假的子组件来渲染
-import Button from '@/button.vue'
+import Button from '../../src/button/button.vue'
 
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'

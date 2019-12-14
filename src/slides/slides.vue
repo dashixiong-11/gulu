@@ -3,7 +3,6 @@
         @mouseenter="onMouseEnter"
         @mouseleave="onMouseLeave"
         @touchstart="onTouchStart"
-        @touchmove="onTouchMove"
         @touchend="onTouchEnd"
    >
       <div class="g-slides-window" ref="window">
@@ -12,11 +11,11 @@
          </div>
       </div>
       <div class="g-slides-dots">
-         <span @click="select(selectedIndex - 1)" class="left">
+         <span @click="select(selectedIndex - 1)" class="left" data-action="prev">
             <g-icon name="left"></g-icon>
          </span>
          <span v-for="n in childrenLength" :key="n" :data-index="n-1" :class="{active: selectedIndex === n-1}" @click="select(n-1)" >{{n}}</span>
-         <span @click="select(selectedIndex + 1)" class="right">
+         <span @click="select(selectedIndex + 1)" class="right" data-action="next">
             <g-icon name="right"></g-icon>
          </span>
       </div>
@@ -24,7 +23,7 @@
 </template>
 
 <script>
-   import gIcon from './icon'
+   import gIcon from '../icon'
    /* $children 只显示子组件， 获取元素的children 可以用 $el */
    export default {
       name: "slides",
