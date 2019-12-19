@@ -35,7 +35,7 @@
 </script>
 
 <style lang='scss' scoped>
-    @import "../var";
+    @import "../../styles/var";
     .g-button {
         display: inline-flex;
         justify-content: center;
@@ -46,7 +46,6 @@
         border-radius: $border-radius;
         border: 1px solid $border-color;
         font-size: $font-size;
-        height: $button-height;
         vertical-align: middle;
         .icon { order: 1; margin-right: .1em; }
         .content {order: 2;}

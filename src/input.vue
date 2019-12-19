@@ -38,7 +38,7 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "var";
+    @import "../styles/var";
   .wrapper{ font-size:$font-size; display:inline-flex; align-items:center;
     > :not(:last-child){ margin-right:.5em }
     > input{ height:32px; border:1px solid $border-color; border-radius:$border-radius; padding:0 8px; font-size:inherit;
