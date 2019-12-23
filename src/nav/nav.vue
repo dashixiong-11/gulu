@@ -7,11 +7,18 @@
 <script>
    export default {
       name: "GuluNav",
+      provide(){
+         return{
+            root:this
+         }
+      },
       props: {
          selected: String
       },
       data() {
-         return {}
+         return {
+            items:[]
+         }
       },
       mounted(){
          this.updateChildren()
@@ -21,13 +28,11 @@
          this.updateChildren()
       },
       computed:{
-         items(){
-            return this.$children.filter( (vm)=>{
-               return vm.$options.name === 'GuluNavItem'
-            })
-         }
       },
       methods:{
+         addItem(vm){
+            this.items.push(vm)
+         },
          updateChildren(){
             this.items.forEach( vm => {
                if(this.selected === vm.name){
@@ -51,8 +56,10 @@
 </script>
 
 <style scoped lang="scss">
+   @import "../../styles/var";
    .g-nav {
       display: flex;
-      align-items: center;
+      border-bottom: 1px solid $grey;
+      cursor: default;
    }
 </style>
