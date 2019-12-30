@@ -17,7 +17,8 @@
       },
       data() {
          return {
-            items:[]
+            items:[],
+            namePath:[]
          }
       },
       mounted(){
@@ -33,13 +34,9 @@
          addItem(vm){
             this.items.push(vm)
          },
-         updateChildren(){
-            this.items.forEach( vm => {
-               if(this.selected === vm.name){
-                  vm.selected = true
-               }else {
-                  vm.selected = false
-               }
+         updateChildren: function () {
+            this.items.forEach(vm => {
+               vm.selected = this.selected === vm.name;
             })
          },
          listenToChildren(){

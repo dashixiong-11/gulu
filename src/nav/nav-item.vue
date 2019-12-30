@@ -7,7 +7,7 @@
 <script>
    export default {
       name: "GuluNavItem",
-      inject:['root'],
+      inject: ['root'],
       props: {
          name: {
             type: String,
@@ -19,12 +19,14 @@
             selected: false,
          }
       },
-      created(){
+      created() {
          this.root.addItem(this)
       },
-      methods:{
-         onClick(){
-            this.$emit('update:selected',this.name)
+      methods: {
+         onClick() {
+            this.root.namePath = []
+            this.$parent.upDateNamePath && this.$parent.upDateNamePath()
+            this.$emit('update:selected', this.name)
          }
       }
    }
@@ -32,27 +34,34 @@
 
 <style scoped lang="scss">
    @import "../../styles/var";
+
    .g-nav-item {
       padding: 10px 20px;
       position: relative;
       color: $font-gray;
       background: white;
-      &:first-child{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child {
          border-top-left-radius: $border-radius;
          border-top-right-radius: $border-radius;
       }
-      &:last-child{
+
+      &:last-child {
          border-bottom-left-radius: $border-radius;
          border-bottom-right-radius: $border-radius;
       }
 
-      &:hover{
+      &:hover {
          color: black;
       }
 
       &.selected {
-         color:black;
-         &::after{
+         color: black;
+
+         &::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -62,9 +71,10 @@
          }
       }
    }
-   .g-nav-sub .g-nav-item{
-      &.selected{
-         color:black;
+
+   .g-nav-sub .g-nav-item {
+      &.selected {
+         color: black;
          &::after{
             display: none;
          }
