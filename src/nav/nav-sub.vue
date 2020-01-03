@@ -2,20 +2,27 @@
    <div class="g-nav-sub" @mouseenter="hover" @mouseleave="hover" :class="{active}">
       <span class="g-nav-sub-label" :class="{selected}">
          <slot name="title"></slot>
-         <span></span>
+         <span class="g-nav-sub-label-icon" :class="{open}">
+            <g-icon name="left"></g-icon>
+         </span>
       </span>
-      <div class="g-nav-sub-popover" v-show="open">
-         <div class="g-nav-sub-popover-wrapper">
-            <slot></slot>
+      <transition>
+         <div class="g-nav-sub-popover" v-show="open" >
+            <div class="g-nav-sub-popover-wrapper">
+               <slot></slot>
+            </div>
          </div>
-      </div>
+      </transition>
    </div>
 </template>
 
 <script>
+   import GIcon from '../icon'
+
    export default {
+      components: {GIcon},
       name: "GuluNavSub",
-      inject:['root'],
+      inject: ['root'],
       props: {
          name: {
             type: String,
@@ -28,8 +35,8 @@
             selected: false
          }
       },
-      computed:{
-         active(){
+      computed: {
+         active() {
             return this.root.namePath.indexOf(this.name) >= 0
          }
       },
@@ -37,9 +44,9 @@
          hover() {
             this.open = !this.open
          },
-         upDateNamePath(){
+         upDateNamePath() {
             this.root.namePath.unshift(this.name)
-            if(this.$parent.upDateNamePath){
+            if (this.$parent.upDateNamePath) {
                this.$parent.upDateNamePath()
             }
          }
@@ -56,9 +63,28 @@
       align-items: center;
       justify-content: center;
       color: $font-gray;
-       .g-nav-sub-label {
+
+      .g-nav-sub-label {
          padding: 10px 20px;
          display: block;
+
+         .g-nav-sub-label-icon {
+            font-size: $font-size;
+            .icon {
+               color: $font-gray;
+               transition: all .2s;
+               margin-left: 1em;
+               transform: rotate(-90deg);
+            }
+         }
+
+         .g-nav-sub-label-icon.open {
+            font-size: $font-size;
+
+            .icon {
+               transform: rotate(-270deg);
+            }
+         }
 
          &:hover {
             color: $hover-black;
@@ -97,6 +123,24 @@
          &-wrapper {
             border-radius: $border-radius;
             box-shadow: 0 0 3px $box-shadow-color;
+            display: flex;
+            flex-direction: column;
+            .g-nav-item{
+
+            }
+            .g-nav-sub-label {
+               .g-nav-sub-label-icon {
+                  .icon {
+                     transform: rotate(180deg);
+                  }
+               }
+
+               .g-nav-sub-label-icon.open {
+                  .icon {
+                     transform: rotate(0);
+                  }
+               }
+            }
          }
       }
 
@@ -105,19 +149,21 @@
             top: 0;
             left: 100%;
             padding-left: 8px;
-            .g-nav-sub-popover-wrapper{
-               .g-nav-sub.active{
-                  &::after{
+
+            .g-nav-sub-popover-wrapper {
+               .g-nav-sub.active {
+                  &::after {
                      display: none;
                   }
                }
             }
          }
       }
+
       .g-nav-sub-popover {
-         .g-nav-sub-popover-wrapper{
-            .g-nav-sub.active{
-               &::after{
+         .g-nav-sub-popover-wrapper {
+            .g-nav-sub.active {
+               &::after {
                   display: none;
                }
             }

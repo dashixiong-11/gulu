@@ -36,13 +36,10 @@
    @import "../../styles/var";
 
    .g-nav-item {
-      padding: 10px 20px;
+      padding: 10px 20px ;
       position: relative;
       color: $font-gray;
       background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
       &:first-child {
          border-top-left-radius: $border-radius;
