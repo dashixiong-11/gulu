@@ -38,7 +38,7 @@
          },
          enter(el, done) {
             let {height} = el.getBoundingClientRect()
-            el.style.height = 0
+            el.style.height = '0'
             el.getBoundingClientRect()
             el.style.height = `${height}px`
             el.addEventListener('transitionend', () => {
@@ -48,16 +48,16 @@
          afterEnter(el) {
             el.style.height = 'auto'
          },
-         leave: function (el, done) {
+         leave(el, done) {
             let {height} = el.getBoundingClientRect()
             el.style.height = `${height}px`
             el.getBoundingClientRect()
-            el.style.height = 0
+            el.style.height = '0'
             el.addEventListener('transitionend', () => {
                done()
             })
          },
-         afterLeave: function (el) {
+         afterLeave(el) {
             el.style.height = 'auto'
          },
       }

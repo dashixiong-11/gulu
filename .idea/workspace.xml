@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="移动目录，测试通过">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/button.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/button.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/nav.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/nav.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nav-vertical/nav-vertical-sub.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/nav-vertical/nav-vertical-sub.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,22 +94,22 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/styles" />
-      <recent name="$PROJECT_DIR$/src/slides" />
-      <recent name="$PROJECT_DIR$/src/layout" />
-      <recent name="$PROJECT_DIR$/src/grid" />
-      <recent name="$PROJECT_DIR$/src/collapse" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/nav-vertical" />
       <recent name="$PROJECT_DIR$/tests/unit" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/styles" />
+      <recent name="$PROJECT_DIR$/src/slides" />
+      <recent name="$PROJECT_DIR$/src/layout" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -231,7 +228,12 @@
       <workItem from="1578041307485" duration="50000" />
       <workItem from="1578041631666" duration="4284000" />
       <workItem from="1578057451164" duration="284000" />
-      <workItem from="1578104093679" duration="1205000" />
+      <workItem from="1578104093679" duration="3784000" />
+      <workItem from="1578120562350" duration="1780000" />
+      <workItem from="1578385678396" duration="2770000" />
+      <workItem from="1578454562904" duration="293000" />
+      <workItem from="1579436187535" duration="14000" />
+      <workItem from="1579489705394" duration="2071000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -550,10 +552,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="移动目录，测试通过" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="221" y="79" key="SettingsEditor" timestamp="1578043545324">
+    <state x="221" y="79" key="SettingsEditor" timestamp="1578120540461">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="221" y="79" key="SettingsEditor/0.23.1440.834@0.23.1440.834" timestamp="1578043545324" />
+    <state x="221" y="79" key="SettingsEditor/0.23.1440.834@0.23.1440.834" timestamp="1578120540461" />
     <state x="570" y="358" key="VCS.ChangelistChooser" timestamp="1578043376388">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -562,9 +564,9 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="385" y="200" key="run.anything.popup/0.23.1440.834@0.23.1440.834" timestamp="1578045438981" />
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1578044020346">
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1578110449515">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1578044020346" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1578110449515" />
   </component>
 </project>
