@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="移动目录，测试通过">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nav-vertical/nav-vertical-sub.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/nav-vertical/nav-vertical-sub.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/validate.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/validate.spec.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,27 +18,6 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>sin</find>
-      <find>watch</find>
-      <find>console.log</find>
-      <find>keyf</find>
-      <find>demo</find>
-      <find>des</find>
-      <find>import</find>
-      <find>@/</find>
-      <find>var</find>
-      <find>console</find>
-      <find>active</find>
-    </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/test</dir>
-      <dir>$PROJECT_DIR$/src</dir>
-      <dir>$PROJECT_DIR$</dir>
-      <dir>$PROJECT_DIR$/src/nav-vertical</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -233,7 +212,9 @@
       <workItem from="1578385678396" duration="2770000" />
       <workItem from="1578454562904" duration="293000" />
       <workItem from="1579436187535" duration="14000" />
-      <workItem from="1579489705394" duration="2071000" />
+      <workItem from="1579489705394" duration="2135000" />
+      <workItem from="1579572396000" duration="8994000" />
+      <workItem from="1579930163097" duration="2106000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -560,6 +541,10 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="570" y="358" key="VCS.ChangelistChooser/0.23.1440.834@0.23.1440.834" timestamp="1578043376388" />
+    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1579578082615">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1579578082615" />
     <state x="385" y="200" key="run.anything.popup" timestamp="1578045438981">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
