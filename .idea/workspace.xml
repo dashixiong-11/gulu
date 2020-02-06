@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="移动目录，测试通过">
+    <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/validate.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/validate.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +213,8 @@
       <workItem from="1579436187535" duration="14000" />
       <workItem from="1579489705394" duration="2135000" />
       <workItem from="1579572396000" duration="8994000" />
-      <workItem from="1579930163097" duration="2106000" />
+      <workItem from="1579930163097" duration="2736000" />
+      <workItem from="1580974462885" duration="6689000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -447,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576295934146</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="使用测试驱动开发，初步实现validate">
+      <created>1579940546037</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1579940546037</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView">
@@ -505,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="使用表驱动编程重构代码" />
     <MESSAGE value="跳过了一个不知道如何实现的测试用例" />
     <MESSAGE value="collapse 基本样式完成" />
     <MESSAGE value="暂时完成 single 和 selected" />
@@ -530,9 +536,14 @@
     <MESSAGE value="把 db.js 移动到 fixtures 下" />
     <MESSAGE value="把button相关组件移动到 src/button 下" />
     <MESSAGE value="移动目录，测试通过" />
-    <option name="LAST_COMMIT_MESSAGE" value="移动目录，测试通过" />
+    <MESSAGE value="使用测试驱动开发，初步实现validate" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用测试驱动开发，初步实现validate" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1579940545363">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1579940545363" />
     <state x="221" y="79" key="SettingsEditor" timestamp="1578120540461">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -541,17 +552,17 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="570" y="358" key="VCS.ChangelistChooser/0.23.1440.834@0.23.1440.834" timestamp="1578043376388" />
-    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1579578082615">
+    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1581001476717">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1579578082615" />
+    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1581001476717" />
     <state x="385" y="200" key="run.anything.popup" timestamp="1578045438981">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="385" y="200" key="run.anything.popup/0.23.1440.834@0.23.1440.834" timestamp="1578045438981" />
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1578110449515">
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1581002100764">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1578110449515" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1581002100764" />
   </component>
 </project>
