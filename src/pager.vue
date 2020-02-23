@@ -1,6 +1,6 @@
 <template>
    <div class="gulu-pager">
-      <span class="gulu-pager-nav" :class="{disabled:currentPage === 1}" @click="onClickPage(currentPage -1 )">
+      <span class="gulu-pager-nav " ref="prev" :class="{disabled:currentPage === 1}" @click="onClickPage(currentPage -1 )">
         <g-icon name="left"></g-icon>
       </span>
       <template v-for="page in pages">
@@ -14,7 +14,7 @@
             <span class="gulu-pager-item other" @click="onClickPage(page)">{{page}}</span>
          </template>
       </template>
-      <span class="gulu-pager-nav" :class="{disabled: currentPage === totalPage}" @click="onClickPage(currentPage +1 )">
+      <span class="gulu-pager-nav" ref="next" :class="{disabled: currentPage === totalPage}" @click="onClickPage(currentPage +1 )">
         <g-icon name="right"></g-icon>
       </span>
    </div>
@@ -38,10 +38,6 @@
             type: Number,
             required: true
          },
-         hideIfOnePage: {
-            type: Boolean,
-            default: true
-         }
       },
       methods: {
          onClickPage(page) {
