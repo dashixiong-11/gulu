@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pager.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_var.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +219,11 @@
       <workItem from="1581155796665" duration="3372000" />
       <workItem from="1581774731910" duration="554000" />
       <workItem from="1582275247687" duration="2692000" />
-      <workItem from="1582438610476" duration="4427000" />
+      <workItem from="1582438610476" duration="4971000" />
+      <workItem from="1582555914317" duration="463000" />
+      <workItem from="1582556484937" duration="361000" />
+      <workItem from="1582624335478" duration="88000" />
+      <workItem from="1582799628594" duration="5076000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -479,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581174329753</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="完成 pager 的测试用例">
+      <created>1582443305820</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1582443305820</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView">
@@ -537,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="暂时完成 single 和 selected" />
     <MESSAGE value="完成 collapse 组件 第一阶段完成" />
     <MESSAGE value="添加 官网" />
     <MESSAGE value="准备换成 vue-cli3" />
@@ -562,13 +573,14 @@
     <MESSAGE value="使用测试驱动开发，初步实现validate" />
     <MESSAGE value="完成pager基本结构，和样式" />
     <MESSAGE value="完成 pager 组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成 pager 组件" />
+    <MESSAGE value="完成 pager 的测试用例" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成 pager 的测试用例" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1581174329417">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1582443305342">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1581174329417" />
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1582443305342" />
     <state x="221" y="79" key="SettingsEditor" timestamp="1578120540461">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -577,10 +589,10 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="570" y="358" key="VCS.ChangelistChooser/0.23.1440.834@0.23.1440.834" timestamp="1578043376388" />
-    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1582441974376">
+    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1582804322493">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1582441974376" />
+    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1582804322493" />
     <state x="369" y="163" width="700" height="530" key="recent.locations.popup" timestamp="1581774840796">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -589,9 +601,9 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="385" y="200" key="run.anything.popup/0.23.1440.834@0.23.1440.834" timestamp="1578045438981" />
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1582441959270">
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1582807756724">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1582441959270" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1582807756724" />
   </component>
 </project>
