@@ -4,10 +4,10 @@
          <thead>
          <tr>
             <th>
-               <input type="checkbox"/>
+               <input type="checkbox" @change="onChangeAllItems" ref="allChecked" checked="areAllItemsSelected"/>
             </th>
             <th v-if="numberVisible">#</th>
-            <th v-for="column in columns" :key="column.name">
+            <th v-for="column in columns" :key="column.field">
                {{column.text}}
             </th>
          </tr>
@@ -15,14 +15,12 @@
          <tbody>
          <tr v-for="(item,index) in dataSource" :key="item.id">
             <td>
-               <input type="checkbox" @change="onChangeItem(item,index,$event)"/>
+               <input type="checkbox" @change="onChangeItem(item,index,$event)" :checked="inSelectedItems(item)"/>
             </td>
             <td v-if="numberVisible">{{index+1}}</td>
-            <template v-for="column in columns">
-               <td :key="column.id">
+               <td v-for="column in columns" :key="column.field">
                   {{item[column.field]}}
                </td>
-            </template>
          </tr>
          </tbody>
       </table>
@@ -40,29 +38,63 @@
          },
          dataSource: {
             type: Array,
-            required: true
+            required: true,
+            validator(array){
+               return !array.filter( item => item.id === undefined).length > 0
+            }
          },
          numberVisible: {
             type: Boolean,
             default: false
          },
-         bordered:{
-            type:Boolean,
-            default:false
+         bordered: {
+            type: Boolean,
+            default: false
          },
-         compact:{
-            type:Boolean,
-            default:false
+         compact: {
+            type: Boolean,
+            default: false
          },
-         striped:{
-            type:Boolean,
-            default:true
+         striped: {
+            type: Boolean,
+            default: true
+         },
+         selectedItems: {
+            type: Array,
+            default: () => []
          }
       },
-      methods:{
-         onChangeItem(item,index,e){
-            this.$emit('changeItem',{selected:e.target.checked, item,index})
-            console.log(e.target.checked)
+      computed:{},
+      watch:{
+         selectedItems(){
+            if(this.selectedItems.length === this.dataSource.length){
+               this.$refs.allChecked.indeterminate = false
+               this.$refs.allChecked.checked = true
+            }else if (this.selectedItems.length === 0){
+               this.$refs.allChecked.indeterminate = false
+            }else {
+               this.$refs.allChecked.indeterminate = true
+            }
+
+         }
+      },
+      methods: {
+         inSelectedItems(item){
+           return this.selectedItems.filter((i)=> i.id === item.id).length>0
+         },
+         onChangeItem(item, index, e) {
+            let selected = e.target.checked
+            let copy = JSON.parse(JSON.stringify(this.selectedItems))
+            if (selected) {
+               copy.push(item)
+            } else {
+               copy = copy.filter( i => i.id !== item.id)
+            }
+            this.$emit('update:selectedItems', copy)
+         },
+         onChangeAllItems(e) {
+            let selected = e.target.checked
+            this.$emit('update:selectedItems', selected ? this.dataSource : [])
          }
       }
    }

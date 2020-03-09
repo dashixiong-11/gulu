@@ -4,7 +4,7 @@
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_var.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/table.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +223,9 @@
       <workItem from="1582555914317" duration="463000" />
       <workItem from="1582556484937" duration="361000" />
       <workItem from="1582624335478" duration="88000" />
-      <workItem from="1582799628594" duration="5076000" />
+      <workItem from="1582799628594" duration="7837000" />
+      <workItem from="1582901950268" duration="137000" />
+      <workItem from="1583766282561" duration="1320000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>

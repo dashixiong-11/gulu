@@ -1,7 +1,7 @@
 <template>
    <div style="margin: 20px">
       {{selected}}
-      <g-table :columns="columns" :data-source="dataSource" bordered @changeItem="x"></g-table>
+      <g-table :columns="columns" :data-source="dataSource" bordered :selected-items.sync="selected"></g-table>
       <div style="margin: 20px">
          <g-pager :total-page="20" :current-page.sync="currentPage"></g-pager>
       </div>
