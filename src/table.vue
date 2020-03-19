@@ -4,11 +4,17 @@
          <thead>
          <tr>
             <th>
-               <input type="checkbox" @change="onChangeAllItems" ref="allChecked" checked="areAllItemsSelected"/>
+               <input type="checkbox" @change="onChangeAllItems" ref="allChecked" :checked="areAllItemsSelected"/>
             </th>
             <th v-if="numberVisible">#</th>
             <th v-for="column in columns" :key="column.field">
-               {{column.text}}
+               <div class="gulu-table-header">
+                  {{column.text}}
+                  <span v-if=" column.field in orderBy" class="gulu-table-sorter" @click="changeOrderBy(column.field)">
+                  <g-icon name="asc" :class="{active:orderBy[column.field] === 'asc'}"></g-icon>
+                  <g-icon name="desc" :class="{active:orderBy[column.field] === 'desc'}"></g-icon>
+               </span>
+               </div>
             </th>
          </tr>
          </thead>
@@ -18,20 +24,30 @@
                <input type="checkbox" @change="onChangeItem(item,index,$event)" :checked="inSelectedItems(item)"/>
             </td>
             <td v-if="numberVisible">{{index+1}}</td>
-               <td v-for="column in columns" :key="column.field">
-                  {{item[column.field]}}
-               </td>
+            <td v-for="column in columns" :key="column.field">
+               {{item[column.field]}}
+            </td>
          </tr>
          </tbody>
       </table>
+      <div v-if="loading" class="gulu-table-loading">
+         <g-icon name="loading"/>
+      </div>
    </div>
 
 </template>
 
 <script>
+   import GIcon from './icon'
+
    export default {
       name: "GuluTable",
+      components: {GIcon},
       props: {
+         orderBy: {
+            type: Object,
+            default: () => ({})
+         },
          columns: {
             type: Array,
             required: true
@@ -39,8 +55,8 @@
          dataSource: {
             type: Array,
             required: true,
-            validator(array){
-               return !array.filter( item => item.id === undefined).length > 0
+            validator(array) {
+               return !array.filter(item => item.id === undefined).length > 0
             }
          },
          numberVisible: {
@@ -62,25 +78,43 @@
          selectedItems: {
             type: Array,
             default: () => []
+         },
+         loading:{
+            type:Boolean,
+            default:false
          }
       },
-      computed:{},
-      watch:{
-         selectedItems(){
-            if(this.selectedItems.length === this.dataSource.length){
+      computed: {
+         areAllItemsSelected() {
+            const a = this.dataSource.map(item => item.id).sort()
+            const b = this.selectedItems.map(item => item.id).sort()
+            if (a.length !== b.length) {
+               return false
+            }
+            let equal = true
+            for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) {
+               equal = false
+               break
+            }
+            return equal
+         },
+      },
+      watch: {
+         selectedItems() {
+            if (this.selectedItems.length === this.dataSource.length) {
                this.$refs.allChecked.indeterminate = false
                this.$refs.allChecked.checked = true
-            }else if (this.selectedItems.length === 0){
+            } else if (this.selectedItems.length === 0) {
                this.$refs.allChecked.indeterminate = false
-            }else {
+            } else {
                this.$refs.allChecked.indeterminate = true
             }
 
-         }
+         },
       },
       methods: {
-         inSelectedItems(item){
-           return this.selectedItems.filter((i)=> i.id === item.id).length>0
+         inSelectedItems(item) {
+            return this.selectedItems.filter((i) => i.id === item.id).length > 0
          },
          onChangeItem(item, index, e) {
             let selected = e.target.checked
@@ -88,13 +122,25 @@
             if (selected) {
                copy.push(item)
             } else {
-               copy = copy.filter( i => i.id !== item.id)
+               copy = copy.filter(i => i.id !== item.id)
             }
             this.$emit('update:selectedItems', copy)
          },
          onChangeAllItems(e) {
             let selected = e.target.checked
             this.$emit('update:selectedItems', selected ? this.dataSource : [])
+         },
+         changeOrderBy(key) {
+            const copy = JSON.parse(JSON.stringify(this.orderBy))
+            let oldValue = copy[key]
+            if(oldValue === 'asc'){
+               copy[key] = 'desc'
+            }else if(oldValue === 'desc'){
+               copy[key] = true
+            }else {
+               copy[key] = 'asc'
+            }
+            this.$emit('update:orderBy', copy)
          }
       }
    }
@@ -156,7 +202,7 @@
             fill: $grey;
 
             &.active {
-               fill: red;
+               fill: black;
             }
 
             &:first-child {
@@ -191,7 +237,6 @@
          display: flex;
          justify-content: center;
          align-items: center;
-
          svg {
             width: 50px;
             height: 50px;

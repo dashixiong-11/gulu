@@ -52,7 +52,9 @@
         &:hover {border-color: $border-color-hover;}
         &:active {background-color: $button-active-bg;}
         &:focus {outline: none;}
-        .loading {animation: spin 1s infinite linear;}
+        .loading {
+            @include spin;
+        }
     }
     .icon-right {
         .icon {order: 2;margin-left: .1em;margin-right: 0;}

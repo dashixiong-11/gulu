@@ -1,7 +1,10 @@
 <template>
    <div style="margin: 20px">
       {{selected}}
-      <g-table :columns="columns" :data-source="dataSource" bordered :selected-items.sync="selected"></g-table>
+      <g-table :columns="columns" @update:orderBy="sort"
+               :data-source="dataSource"
+               :loading="loading"
+               bordered :selected-items.sync="selected" :order-by.sync="orderBy"></g-table>
       <div style="margin: 20px">
          <g-pager :total-page="20" :current-page.sync="currentPage"></g-pager>
       </div>
@@ -24,6 +27,11 @@
                {text: '姓名', field: 'name'},
                {text: '分数', field: 'score'}
             ],
+            orderBy:{ //true 开启排序
+              name:true,
+              score:'desc'
+            },
+            loading:false,
             dataSource: [
                {id: 1, name: '张三', score: 100},
                {id: 2, name: '里斯', score: 90},
@@ -44,6 +52,13 @@
                let index = this.selected.indexOf(item.name)
                this.selected.splice(index,1)
             }
+         },
+         sort(value){
+            this.loading = true
+            let t = setTimeout(()=>{
+               this.loading = false
+               clearTimeout(t)
+            },1500)
          }
       }
    }

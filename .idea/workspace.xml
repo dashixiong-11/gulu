@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/button/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/table.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +93,23 @@
       <recent name="$PROJECT_DIR$/src/slides" />
       <recent name="$PROJECT_DIR$/src/layout" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.serve" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -225,7 +245,8 @@
       <workItem from="1582624335478" duration="88000" />
       <workItem from="1582799628594" duration="7837000" />
       <workItem from="1582901950268" duration="137000" />
-      <workItem from="1583766282561" duration="1320000" />
+      <workItem from="1583766282561" duration="1354000" />
+      <workItem from="1584623812368" duration="5113000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -493,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582443305820</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="完成 table 多选">
+      <created>1583771543419</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1583771543420</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -551,7 +579,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成 collapse 组件 第一阶段完成" />
     <MESSAGE value="添加 官网" />
     <MESSAGE value="准备换成 vue-cli3" />
     <MESSAGE value=" 更换到 vue cli3" />
@@ -576,13 +603,30 @@
     <MESSAGE value="完成pager基本结构，和样式" />
     <MESSAGE value="完成 pager 组件" />
     <MESSAGE value="完成 pager 的测试用例" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成 pager 的测试用例" />
+    <MESSAGE value="完成 table 多选" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成 table 多选" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1582443305342">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1583771543022">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1582443305342" />
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1583771543022" />
+    <state width="1419" height="200" key="GridCell.Tab.0.bottom" timestamp="1584624117057">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1419" height="200" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1584624117057" />
+    <state width="1419" height="200" key="GridCell.Tab.0.center" timestamp="1584624117055">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1419" height="200" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1584624117055" />
+    <state width="1419" height="200" key="GridCell.Tab.0.left" timestamp="1584624117055">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1419" height="200" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1584624117055" />
+    <state width="1419" height="200" key="GridCell.Tab.0.right" timestamp="1584624117056">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1419" height="200" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1584624117056" />
     <state x="221" y="79" key="SettingsEditor" timestamp="1578120540461">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -603,9 +647,9 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="385" y="200" key="run.anything.popup/0.23.1440.834@0.23.1440.834" timestamp="1578045438981" />
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1582807756724">
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1584630740936">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1582807756724" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1584630740936" />
   </component>
 </project>
