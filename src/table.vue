@@ -1,35 +1,52 @@
 <template>
-   <div class="gulu-table-wrapper">
-      <table class="gulu-table" :class="{bordered,compact,striped}">
-         <thead>
-         <tr>
-            <th>
-               <input type="checkbox" @change="onChangeAllItems" ref="allChecked" :checked="areAllItemsSelected"/>
-            </th>
-            <th v-if="numberVisible">#</th>
-            <th v-for="column in columns" :key="column.field">
-               <div class="gulu-table-header">
-                  {{column.text}}
-                  <span v-if=" column.field in orderBy" class="gulu-table-sorter" @click="changeOrderBy(column.field)">
+   <div class="gulu-table-wrapper" ref="wrapper">
+      <div style="overflow:auto" ref="tableWrapper">
+         <table class="gulu-table" :class="{bordered,compact,striped}" ref="table">
+            <thead>
+            <tr>
+               <th v-if="expandField" :style="{width:'50px'}">
+               </th>
+               <th v-else-if="choosable && !expandField" :style="{width:'50px'}" class="gulu-table-center">
+                  <input type="checkbox" @change="onChangeAllItems" ref="allChecked" :checked="areAllItemsSelected"/>
+               </th>
+               <th v-if="numberVisible">#</th>
+               <th :style="{width:column.width+'px'}" v-for="column in columns" :key="column.field">
+                  <div class="gulu-table-header">
+                     {{column.text}}
+                     <span v-if=" column.field in orderBy" class="gulu-table-sorter"
+                           @click="changeOrderBy(column.field)">
                   <g-icon name="asc" :class="{active:orderBy[column.field] === 'asc'}"></g-icon>
                   <g-icon name="desc" :class="{active:orderBy[column.field] === 'desc'}"></g-icon>
                </span>
-               </div>
-            </th>
-         </tr>
-         </thead>
-         <tbody>
-         <tr v-for="(item,index) in dataSource" :key="item.id">
-            <td>
-               <input type="checkbox" @change="onChangeItem(item,index,$event)" :checked="inSelectedItems(item)"/>
-            </td>
-            <td v-if="numberVisible">{{index+1}}</td>
-            <td v-for="column in columns" :key="column.field">
-               {{item[column.field]}}
-            </td>
-         </tr>
-         </tbody>
-      </table>
+                  </div>
+               </th>
+            </tr>
+            </thead>
+            <tbody>
+            <template v-for="(item,index) in dataSource">
+               <tr :key="item.id">
+                  <td v-if="expandField" :style="{width:'50px'}" class="gulu-table-center">
+                     <g-icon :name=" inExpandedIds(item.id)? 'sub':'add'" @click="expandItem(item.id)"></g-icon>
+                  </td>
+                  <td v-else-if="choosable && !expandField" :style="{width:'50px'}" class="gulu-table-center">
+                     <input type="checkbox" @change="onChangeItem(item,index,$event)" :checked="inSelectedItems(item)"/>
+                  </td>
+                  <td :style="{width:'50px'}" class="gulu-table-center" v-if="numberVisible">{{index+1}}</td>
+                  <td :style="{width:column.width+'px'}" v-for="column in columns" :key="column.field">
+                     {{item[column.field]}}
+                  </td>
+               </tr>
+               <tr v-if="inExpandedIds(item.id) && expandField" :key="`${item.id}-expand`">
+                  <td style="width:50px">
+                  </td>
+                  <td :colspan="columns.length">
+                     {{item[expandField] || '空'}}
+                  </td>
+               </tr>
+            </template>
+            </tbody>
+         </table>
+      </div>
       <div v-if="loading" class="gulu-table-loading">
          <g-icon name="loading"/>
       </div>
@@ -44,6 +61,9 @@
       name: "GuluTable",
       components: {GIcon},
       props: {
+         height: {
+            type: Number
+         },
          orderBy: {
             type: Object,
             default: () => ({})
@@ -79,10 +99,37 @@
             type: Array,
             default: () => []
          },
-         loading:{
+         loading: {
+            type: Boolean,
+            default: false
+         },
+         expandField: {
+            type: String
+         },
+         choosable:{
             type:Boolean,
             default:false
          }
+      },
+      data() {
+         return {
+            tableCopy: null,
+            expandedIds: []
+         }
+      },
+      mounted() {
+         let tableCopy = this.$refs.table.cloneNode(false)
+         this.tableCopy = tableCopy
+         let theadCopy = this.$refs.table.children[0]
+         let {height} = theadCopy.getBoundingClientRect()
+         this.$refs.tableWrapper.style.marginTop = height + 'px'
+         this.$refs.tableWrapper.style.height = this.height - height + 'px'
+         tableCopy.classList.add('gulu-table-copy')
+         tableCopy.appendChild(theadCopy)
+         this.$refs.wrapper.appendChild(tableCopy)
+      },
+      beforeDestroy() {
+         this.tableCopy.remove()
       },
       computed: {
          areAllItemsSelected() {
@@ -133,14 +180,25 @@
          changeOrderBy(key) {
             const copy = JSON.parse(JSON.stringify(this.orderBy))
             let oldValue = copy[key]
-            if(oldValue === 'asc'){
+            if (oldValue === 'asc') {
                copy[key] = 'desc'
-            }else if(oldValue === 'desc'){
+            } else if (oldValue === 'desc') {
                copy[key] = true
-            }else {
+            } else {
                copy[key] = 'asc'
             }
             this.$emit('update:orderBy', copy)
+         },
+         expandItem(id){
+            if(this.expandedIds.indexOf(id)>=0){
+               this.expandedIds.splice(this.expandedIds.indexOf(id),1)
+
+            }else {
+               this.expandedIds.push(id)
+            }
+         },
+         inExpandedIds(id){
+            return this.expandedIds.indexOf(id) >= 0
          }
       }
    }
@@ -156,6 +214,7 @@
       border-spacing: 0;
       border-bottom: 1px solid $grey;
 
+/*
       &.bordered {
          border: 1px solid $grey;
 
@@ -163,6 +222,7 @@
             border: 1px solid $grey;
          }
       }
+*/
 
       &.compact {
          td, th {
@@ -237,6 +297,7 @@
          display: flex;
          justify-content: center;
          align-items: center;
+
          svg {
             width: 50px;
             height: 50px;
@@ -252,7 +313,7 @@
          background: white;
       }
 
-      &-expendIcon {
+      &-expandIcon {
          width: 10px;
          height: 10px;
       }

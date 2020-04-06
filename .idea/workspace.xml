@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/dashixiong.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/dashixiong.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/button/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/table.vue" afterDir="false" />
     </list>
@@ -246,7 +245,11 @@
       <workItem from="1582799628594" duration="7837000" />
       <workItem from="1582901950268" duration="137000" />
       <workItem from="1583766282561" duration="1354000" />
-      <workItem from="1584623812368" duration="5113000" />
+      <workItem from="1584623812368" duration="5380000" />
+      <workItem from="1584850001997" duration="32000" />
+      <workItem from="1585053231675" duration="423000" />
+      <workItem from="1585226154057" duration="600000" />
+      <workItem from="1586139141232" duration="12595000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -521,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583771543420</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="添加loading">
+      <created>1584631117092</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1584631117092</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView">
@@ -579,7 +589,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加 官网" />
     <MESSAGE value="准备换成 vue-cli3" />
     <MESSAGE value=" 更换到 vue cli3" />
     <MESSAGE value="改为单向数据流" />
@@ -604,29 +613,30 @@
     <MESSAGE value="完成 pager 组件" />
     <MESSAGE value="完成 pager 的测试用例" />
     <MESSAGE value="完成 table 多选" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成 table 多选" />
+    <MESSAGE value="添加loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加loading" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1583771543022">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1584631116612">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1583771543022" />
-    <state width="1419" height="200" key="GridCell.Tab.0.bottom" timestamp="1584624117057">
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1584631116612" />
+    <state width="1419" height="200" key="GridCell.Tab.0.bottom" timestamp="1584631177663">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state width="1419" height="200" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1584624117057" />
-    <state width="1419" height="200" key="GridCell.Tab.0.center" timestamp="1584624117055">
+    <state width="1419" height="200" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1584631177663" />
+    <state width="1419" height="200" key="GridCell.Tab.0.center" timestamp="1584631177662">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state width="1419" height="200" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1584624117055" />
-    <state width="1419" height="200" key="GridCell.Tab.0.left" timestamp="1584624117055">
+    <state width="1419" height="200" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1584631177662" />
+    <state width="1419" height="200" key="GridCell.Tab.0.left" timestamp="1584631177662">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state width="1419" height="200" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1584624117055" />
-    <state width="1419" height="200" key="GridCell.Tab.0.right" timestamp="1584624117056">
+    <state width="1419" height="200" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1584631177662" />
+    <state width="1419" height="200" key="GridCell.Tab.0.right" timestamp="1584631177663">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state width="1419" height="200" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1584624117056" />
+    <state width="1419" height="200" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1584631177663" />
     <state x="221" y="79" key="SettingsEditor" timestamp="1578120540461">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -635,14 +645,14 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="570" y="358" key="VCS.ChangelistChooser/0.23.1440.834@0.23.1440.834" timestamp="1578043376388" />
-    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1582804322493">
+    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1586161879803">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1582804322493" />
-    <state x="369" y="163" width="700" height="530" key="recent.locations.popup" timestamp="1581774840796">
+    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1586161879803" />
+    <state x="369" y="163" width="700" height="530" key="recent.locations.popup" timestamp="1586143226137">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="369" y="163" width="700" height="530" key="recent.locations.popup/0.23.1440.834@0.23.1440.834" timestamp="1581774840796" />
+    <state x="369" y="163" width="700" height="530" key="recent.locations.popup/0.23.1440.834@0.23.1440.834" timestamp="1586143226137" />
     <state x="385" y="200" key="run.anything.popup" timestamp="1578045438981">
       <screen x="0" y="23" width="1440" height="834" />
     </state>

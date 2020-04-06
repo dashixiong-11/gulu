@@ -1,10 +1,13 @@
 <template>
    <div style="margin: 20px">
-      {{selected}}
       <g-table :columns="columns" @update:orderBy="sort"
+               :height="400"
+               choosable
+               expand-field="description"
                :data-source="dataSource"
                :loading="loading"
-               bordered :selected-items.sync="selected" :order-by.sync="orderBy"></g-table>
+               bordered :selected-items.sync="selected"
+               :order-by.sync="orderBy"></g-table>
       <div style="margin: 20px">
          <g-pager :total-page="20" :current-page.sync="currentPage"></g-pager>
       </div>
@@ -24,7 +27,7 @@
          return {
             currentPage: 1,
             columns: [
-               {text: '姓名', field: 'name'},
+               {text: '姓名', field: 'name',width:100},
                {text: '分数', field: 'score'}
             ],
             orderBy:{ //true 开启排序
@@ -33,10 +36,18 @@
             },
             loading:false,
             dataSource: [
-               {id: 1, name: '张三', score: 100},
+               {id: 1, name: '张三', score: 100,description:'可展开'},
                {id: 2, name: '里斯', score: 90},
                {id: 3, name: '王武', score: 66},
                {id: 4, name: '李维斯', score: 88},
+               {id: 5, name: '张三', score: 100},
+               {id: 6, name: '里斯', score: 90},
+               {id: 7, name: '王武', score: 66},
+               {id: 8, name: '李维斯', score: 88},
+               {id: 9, name: '张三', score: 100},
+               {id: 10, name: '里斯', score: 90},
+               {id: 11, name: '王武', score: 66},
+               {id: 12, name: '李维斯', score: 88},
             ],
             selected:[]
          }
