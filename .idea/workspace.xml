@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/dashixiong.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/dashixiong.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/table.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -75,7 +72,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -109,18 +106,6 @@
         <item itemvalue="npm.serve" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -249,7 +234,20 @@
       <workItem from="1584850001997" duration="32000" />
       <workItem from="1585053231675" duration="423000" />
       <workItem from="1585226154057" duration="600000" />
-      <workItem from="1586139141232" duration="12595000" />
+      <workItem from="1586139141232" duration="12658000" />
+      <workItem from="1586589625197" duration="337000" />
+      <workItem from="1586590010596" duration="1225000" />
+      <workItem from="1586591294805" duration="74000" />
+      <workItem from="1586591412449" duration="110000" />
+      <workItem from="1586591573318" duration="217000" />
+      <workItem from="1586591821477" duration="58000" />
+      <workItem from="1586762220644" duration="569000" />
+      <workItem from="1586776234898" duration="877000" />
+      <workItem from="1586828589465" duration="7658000" />
+      <workItem from="1586913733181" duration="5495000" />
+      <workItem from="1587001754143" duration="8539000" />
+      <workItem from="1587036682292" duration="2659000" />
+      <workItem from="1587108107896" duration="7726000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -531,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584631117092</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="完成 展开功能">
+      <created>1586167899219</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1586167899219</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView">
@@ -544,12 +549,7 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/node_modules/karma/config.tpl.js" />
-      </list>
-    </option>
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -566,9 +566,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -587,9 +585,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="准备换成 vue-cli3" />
     <MESSAGE value=" 更换到 vue cli3" />
     <MESSAGE value="改为单向数据流" />
     <MESSAGE value="基本完成 cascader 组件 （主要解决更新数据不触发渲染bug）" />
@@ -614,52 +612,53 @@
     <MESSAGE value="完成 pager 的测试用例" />
     <MESSAGE value="完成 table 多选" />
     <MESSAGE value="添加loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加loading" />
+    <MESSAGE value="完成 展开功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成 展开功能" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1584631116612">
+    <state x="320" y="88" key="#Plugins" timestamp="1586591342771">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1584631116612" />
-    <state width="1419" height="200" key="GridCell.Tab.0.bottom" timestamp="1584631177663">
+    <state x="320" y="88" key="#Plugins/0.23.1440.834@0.23.1440.834" timestamp="1586591342771" />
+    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586590059999">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state width="1419" height="200" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1584631177663" />
-    <state width="1419" height="200" key="GridCell.Tab.0.center" timestamp="1584631177662">
+    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1586590059999" />
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1586167898892">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state width="1419" height="200" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1584631177662" />
-    <state width="1419" height="200" key="GridCell.Tab.0.left" timestamp="1584631177662">
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1586167898892" />
+    <state width="1419" height="214" key="GridCell.Tab.0.bottom" timestamp="1587058270585">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state width="1419" height="200" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1584631177662" />
-    <state width="1419" height="200" key="GridCell.Tab.0.right" timestamp="1584631177663">
+    <state width="1419" height="214" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1587058270585" />
+    <state width="1419" height="214" key="GridCell.Tab.0.center" timestamp="1587058270584">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state width="1419" height="200" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1584631177663" />
-    <state x="221" y="79" key="SettingsEditor" timestamp="1578120540461">
+    <state width="1419" height="214" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1587058270584" />
+    <state width="1419" height="214" key="GridCell.Tab.0.left" timestamp="1587058270583">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="221" y="79" key="SettingsEditor/0.23.1440.834@0.23.1440.834" timestamp="1578120540461" />
-    <state x="570" y="358" key="VCS.ChangelistChooser" timestamp="1578043376388">
+    <state width="1419" height="214" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1587058270583" />
+    <state width="1419" height="214" key="GridCell.Tab.0.right" timestamp="1587058270584">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="570" y="358" key="VCS.ChangelistChooser/0.23.1440.834@0.23.1440.834" timestamp="1578043376388" />
-    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1586161879803">
+    <state width="1419" height="214" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1587058270584" />
+    <state x="0" y="23" width="1440" height="834" key="SettingsEditor" timestamp="1586591805159">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1586161879803" />
+    <state x="0" y="23" width="1440" height="834" key="SettingsEditor/0.23.1440.834@0.23.1440.834" timestamp="1586591805159" />
+    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1587111814698">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1587111814698" />
     <state x="369" y="163" width="700" height="530" key="recent.locations.popup" timestamp="1586143226137">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="369" y="163" width="700" height="530" key="recent.locations.popup/0.23.1440.834@0.23.1440.834" timestamp="1586143226137" />
-    <state x="385" y="200" key="run.anything.popup" timestamp="1578045438981">
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1587048212435">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="385" y="200" key="run.anything.popup/0.23.1440.834@0.23.1440.834" timestamp="1578045438981" />
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1584630740936">
-      <screen x="0" y="23" width="1440" height="834" />
-    </state>
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1584630740936" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1587048212435" />
   </component>
 </project>

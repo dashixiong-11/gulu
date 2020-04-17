@@ -1,42 +1,62 @@
 <template>
    <div style="margin: 20px">
-      <g-table :columns="columns" @update:orderBy="sort"
-               :height="400"
-               choosable
-               expand-field="description"
-               :data-source="dataSource"
-               :loading="loading"
-               bordered :selected-items.sync="selected"
-               :order-by.sync="orderBy"></g-table>
-      <div style="margin: 20px">
-         <g-pager :total-page="20" :current-page.sync="currentPage"></g-pager>
-      </div>
+
+      {{error}}
+      <div>只能上传300kb以内，png，jpeg类型文件</div>
+      <g-uploader accept="image/*"
+                  action="http://127.0.0.1:3000/upload"
+                  name="file"
+                  method="POST"
+                  :file-list.sync="fileList"
+                  @error="error = $event"
+                  :size-limit="100"
+                  :parseResponse="parseResponse">
+         <g-button icon="upload">上传</g-button>
+      </g-uploader>
+
+      <!--
+            <g-table :columns="columns" @update:orderBy="sort"
+                     :height="400"
+                     choosable
+                     expand-field="description"
+                     :data-source="dataSource"
+                     :loading="loading"
+                     bordered :selected-items.sync="selected"
+                     :order-by.sync="orderBy"></g-table>
+            <div style="margin: 20px">
+               <g-pager :total-page="20" :current-page.sync="currentPage"></g-pager>
+            </div>
+      -->
    </div>
 </template>
 <script>
    import GPager from './pager'
    import Vue from 'vue'
    import GTable from './table'
+   import GUploader from './uploader'
+   import GButton from './button/button'
 
    Vue.use(plugin)
    import plugin from './plugin'
 
    export default {
-      components: {GPager, GTable},
+      components: {GPager, GTable, GUploader, GButton},
       data() {
          return {
+            error:'',
+            fileList: [],
             currentPage: 1,
             columns: [
-               {text: '姓名', field: 'name',width:100},
+               {text: '姓名', field: 'name', width: 100},
                {text: '分数', field: 'score'}
             ],
-            orderBy:{ //true 开启排序
-              name:true,
-              score:'desc'
+            orderBy: { //true 开启排序
+               name: true,
+               score: 'desc'
             },
-            loading:false,
+            loading: false,
             dataSource: [
-               {id: 1, name: '张三', score: 100,description:'可展开'},
+               {id: 1, name: '张三', score: 100, description: '可展开'},
                {id: 2, name: '里斯', score: 90},
                {id: 3, name: '王武', score: 66},
                {id: 4, name: '李维斯', score: 88},
@@ -49,27 +69,35 @@
                {id: 11, name: '王武', score: 66},
                {id: 12, name: '李维斯', score: 88},
             ],
-            selected:[]
+            selected: []
          }
       },
       created() {
       },
       methods: {
-         x(object){
-            let { selected,item} = object
-            if(selected){
+         parseResponse(res) {
+            let obj = JSON.parse(res)
+            let url = `http://127.0.0.1:3000/preview/${obj.id}`
+            return url
+         },
+         x(object) {
+            let {selected, item} = object
+            if (selected) {
                this.selected.push(item.name)
-            }else {
+            } else {
                let index = this.selected.indexOf(item.name)
-               this.selected.splice(index,1)
+               this.selected.splice(index, 1)
             }
          },
-         sort(value){
+         onError(error) {
+            window.alert(error)
+         },
+         sort(value) {
             this.loading = true
-            let t = setTimeout(()=>{
+            let t = setTimeout(() => {
                this.loading = false
                clearTimeout(t)
-            },1500)
+            }, 1500)
          }
       }
    }
