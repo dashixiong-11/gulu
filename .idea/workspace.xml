@@ -4,7 +4,7 @@
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uploader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/uploader.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +247,8 @@
       <workItem from="1586913733181" duration="5495000" />
       <workItem from="1587001754143" duration="8539000" />
       <workItem from="1587036682292" duration="2659000" />
-      <workItem from="1587108107896" duration="7726000" />
+      <workItem from="1587108107896" duration="7776000" />
+      <workItem from="1587175908849" duration="5940000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -536,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586167899219</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="完成 uploader组件 单文件上传">
+      <created>1587118016059</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1587118016059</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView">
@@ -588,8 +596,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" 更换到 vue cli3" />
-    <MESSAGE value="改为单向数据流" />
     <MESSAGE value="基本完成 cascader 组件 （主要解决更新数据不触发渲染bug）" />
     <MESSAGE value="添加 icon  显示逻辑" />
     <MESSAGE value="添加click-outside 指令" />
@@ -613,7 +619,9 @@
     <MESSAGE value="完成 table 多选" />
     <MESSAGE value="添加loading" />
     <MESSAGE value="完成 展开功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成 展开功能" />
+    <MESSAGE value="完成单文件上传" />
+    <MESSAGE value="完成 uploader组件 单文件上传" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成 uploader组件 单文件上传" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="88" key="#Plugins" timestamp="1586591342771">
@@ -624,10 +632,10 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1586590059999" />
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1586167898892">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1587118015551">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1586167898892" />
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1587118015551" />
     <state width="1419" height="214" key="GridCell.Tab.0.bottom" timestamp="1587058270585">
       <screen x="0" y="23" width="1440" height="834" />
     </state>

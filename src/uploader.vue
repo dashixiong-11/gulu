@@ -57,6 +57,13 @@
          },
          sizeLimit: {
             type: Number
+         },
+         accept:{
+            type:String,
+         },
+         multiple:{
+            type:Boolean,
+            default:false
          }
       },
       methods: {
@@ -72,34 +79,51 @@
          onClickUpload() {
             let input = this.createInput()
             input.addEventListener('change', () => {
-               this.updateFile(input.files[0])
+               this.uploadFiles(input.files)
                input.remove()
             })
             input.click()
          },
-         beforeUploadFile(rawFile, newName) {
-            let {size, type} = rawFile
-            console.log(size)
-            if (size > this.sizeLimit) {
-               this.$emit('error', '文件大于2MB')
-               return false
-            } else {
-               this.$emit('update:fileList', [...this.fileList, {name: newName, size, type, status: 'uploading'}])
-               return true
+         beforeUploadFiles(rawFiles, newNames) {
+            rawFiles = Array.from(rawFiles)
+            for (let i = 0; i < rawFiles.length; i++) {
+               let {size} = rawFiles[i]
+               if (size > this.sizeLimit) {
+                  this.$emit('error', '文件大于2MB')
+                  return false
+               }
             }
-         },
-         updateFile(rawFile) {
-            let {name} = rawFile
-            let newName = this.generateName(name)
-            if (!this.beforeUploadFile(rawFile, newName)) { return }
-            let formDate = new FormData()
-            formDate.append(this.name, rawFile)
-            this.doUploadFile(formDate, (res) => {
-               let url = this.parseResponse(res)
-               this.afterUploadFile(newName, url)
-            }, () => {
-               this.fileUploadError(xhr, newName)
+            let x = rawFiles.map((f, i) => {
+               let {size, type} = rawFiles[i]
+               return {name: newNames[i], size, type, status: 'uploading'}
             })
+            this.$emit('update:fileList', [...this.fileList, ...x])
+            return true
+         },
+         uploadFiles(rawFiles) {
+            let newNames = []
+            for (let i = 0; i < rawFiles.length; i++) {
+               let rawFile = rawFiles[i]
+               let {name} = rawFile
+               let newName = this.generateName(name)
+               newNames[i] = newName
+            }
+
+            if (!this.beforeUploadFiles(rawFiles, newNames)) {
+               return
+            }
+            for (let i = 0; i < rawFiles.length; i++) {
+               let rawFile = rawFiles[i]
+               let newName = newNames[i]
+               let formDate = new FormData()
+               formDate.append(this.name, rawFile)
+               this.doUploadFile(formDate, (res) => {
+                  let url = this.parseResponse(res)
+                  this.afterUploadFile(newName, url)
+               }, (xhr) => {
+                  this.fileUploadError(xhr, newName)
+               })
+            }
          },
          afterUploadFile(newName, url) {
             let file = this.fileList.filter(f => f.name === newName)[0]
@@ -134,7 +158,9 @@
          createInput() {
             this.$refs.temp.innerHTML = ''
             let input = document.createElement('input')
+            if(this.accept){ input.accept = this.accept }
             input.type = 'file'
+            input.multiple = this.multiple
             this.$refs.temp.appendChild(input)
             return input
          },
@@ -145,12 +171,12 @@
             fileCopy.status = 'fail'
             let fileListCopy = [...this.fileList]
             fileListCopy.splice(index, 1, fileCopy)
-/*
-            if () {
+            /*
+                        if () {
 
-            }
-*/
-            this.$emit('error', '...')
+                        }
+            */
+            this.$emit('error', '未知错误，上传失败')
             this.$emit('update:fileList', fileListCopy)
 
          }

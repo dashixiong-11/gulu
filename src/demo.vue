@@ -7,9 +7,10 @@
                   action="http://127.0.0.1:3000/upload"
                   name="file"
                   method="POST"
+                  multiple
                   :file-list.sync="fileList"
                   @error="error = $event"
-                  :size-limit="100"
+                  :size-limit="1024*1024"
                   :parseResponse="parseResponse">
          <g-button icon="upload">上传</g-button>
       </g-uploader>
@@ -79,6 +80,9 @@
             let obj = JSON.parse(res)
             let url = `http://127.0.0.1:3000/preview/${obj.id}`
             return url
+         },
+         addFile(file){
+            this.fileList.push(file)
          },
          x(object) {
             let {selected, item} = object
