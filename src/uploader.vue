@@ -25,6 +25,7 @@
 <script>
    import GButton from './button/button'
    import GIcon from './icon'
+   import http from './http'
 
    export default {
       name: "GuluUploader",
@@ -58,12 +59,12 @@
          sizeLimit: {
             type: Number
          },
-         accept:{
-            type:String,
+         accept: {
+            type: String,
          },
-         multiple:{
-            type:Boolean,
-            default:false
+         multiple: {
+            type: Boolean,
+            default: false
          }
       },
       methods: {
@@ -134,6 +135,7 @@
             let fileListCopy = [...this.fileList]
             fileListCopy.splice(index, 1, copy)
             this.$emit('update:fileList', fileListCopy)
+            this.$emit('uploaded')
          },
          generateName(name) {
             while (this.fileList.filter(f => f.name === name).length > 0) {
@@ -145,20 +147,15 @@
             return name
          },
          doUploadFile(formDate, success, fail) {
-            let xhr = new XMLHttpRequest()
-            xhr.open(this.method, this.action)
-            xhr.onload = () => {
-               success(xhr.response)
-            }
-            xhr.onerror = () => {
-               fail(xhr, xhr.status)
-            }
-            xhr.send(formDate)
+            console.log('上传')
+            http[this.method.toLowerCase()](this.action, {success, fail, data: formDate})
          },
          createInput() {
             this.$refs.temp.innerHTML = ''
             let input = document.createElement('input')
-            if(this.accept){ input.accept = this.accept }
+            if (this.accept) {
+               input.accept = this.accept
+            }
             input.type = 'file'
             input.multiple = this.multiple
             this.$refs.temp.appendChild(input)
