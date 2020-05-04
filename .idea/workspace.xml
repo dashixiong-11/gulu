@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uploader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/uploader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/uploader.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/uploader.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +15,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -251,7 +251,11 @@
       <workItem from="1587108107896" duration="7776000" />
       <workItem from="1587175908849" duration="6980000" />
       <workItem from="1587347163868" duration="11287000" />
-      <workItem from="1587432884765" duration="2225000" />
+      <workItem from="1587432884765" duration="2563000" />
+      <workItem from="1587692768751" duration="1591000" />
+      <workItem from="1588231288410" duration="40000" />
+      <workItem from="1588231343212" duration="6797000" />
+      <workItem from="1588576312175" duration="1324000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -634,14 +638,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="完成 uploader组件 多文件上传" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="88" key="#Plugins" timestamp="1586591342771">
+    <state x="354" y="125" key="#Inspections" timestamp="1587715937735">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="320" y="88" key="#Plugins/0.23.1440.834@0.23.1440.834" timestamp="1586591342771" />
-    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586590059999">
+    <state x="354" y="125" key="#Inspections/0.23.1440.834@0.23.1440.834" timestamp="1587715937735" />
+    <state x="320" y="88" key="#Plugins" timestamp="1588231327775">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1586590059999" />
+    <state x="320" y="88" key="#Plugins/0.23.1440.834@0.23.1440.834" timestamp="1588231327775" />
+    <state x="358" y="214" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1588231600793">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="358" y="214" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.23.1440.834@0.23.1440.834" timestamp="1588231600793" />
+    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588576351556">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1588576351556" />
     <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1587195085744">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -666,10 +678,14 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="0" y="23" width="1440" height="834" key="SettingsEditor/0.23.1440.834@0.23.1440.834" timestamp="1586591805159" />
-    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1587111814698">
+    <state x="507" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588238734578">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1587111814698" />
+    <state x="507" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.834@0.23.1440.834" timestamp="1588238734578" />
+    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1588240442564">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1588240442564" />
     <state x="369" y="163" width="700" height="530" key="recent.locations.popup" timestamp="1586143226137">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
