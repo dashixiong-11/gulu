@@ -7,6 +7,7 @@
 <script>
 
   export default {
+    name:"GuluButtonGroup",
     mounted(){
       for(let node of this.$el.children){
         let name = node.nodeName.toLowerCase()

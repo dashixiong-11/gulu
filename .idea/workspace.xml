@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/button.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/button.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/button.test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/input.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/input.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/input.test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/row.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/row.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/row.test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/button/button-group.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button-group.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collapse/collapse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/collapse/collapse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabs/tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +275,7 @@
       <workItem from="1587692768751" duration="1591000" />
       <workItem from="1588231288410" duration="40000" />
       <workItem from="1588231343212" duration="6797000" />
-      <workItem from="1588576312175" duration="1324000" />
+      <workItem from="1588576312175" duration="4779000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -682,10 +702,10 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="507" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.834@0.23.1440.834" timestamp="1588238734578" />
-    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1588240442564">
+    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1588583084817">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1588240442564" />
+    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1588583084817" />
     <state x="369" y="163" width="700" height="530" key="recent.locations.popup" timestamp="1586143226137">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
