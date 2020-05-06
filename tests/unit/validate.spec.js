@@ -101,7 +101,7 @@ describe('Validator', () => {
    })
 
    it('自定义测试规则 hasNumber', () => {
-      let data = {email: 'acscsa'}
+      let data = {email: 'gmail'}
       let validator = new Validator()
       validator.hasNumber = (value) => {
          if (!/\d/.test(value)) {

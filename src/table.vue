@@ -33,7 +33,12 @@
                   </td>
                   <td :style="{width:'50px'}" class="gulu-table-center" v-if="numberVisible">{{index+1}}</td>
                   <td :style="{width:column.width+'px'}" v-for="column in columns" :key="column.field">
-                     {{item[column.field]}}
+                     <template v-if="column.render">
+                        <v-nodes :vnodes="column.render({value:item[column.field]})"></v-nodes>
+                     </template>
+                     <template v-else>
+                        {{item[column.field]}}
+                     </template>
                   </td>
                </tr>
                <tr v-if="inExpandedIds(item.id) && expandField" :key="`${item.id}-expand`">
@@ -59,7 +64,13 @@
 
    export default {
       name: "GuluTable",
-      components: {GIcon},
+      components: {
+         GIcon,
+         vNodes:{
+         functional:true,
+            render:(h,ctx) => ctx.props.vnodes
+         }
+      },
       props: {
          height: {
             type: Number
@@ -67,10 +78,6 @@
          orderBy: {
             type: Object,
             default: () => ({})
-         },
-         columns: {
-            type: Array,
-            required: true
          },
          dataSource: {
             type: Array,
@@ -114,10 +121,18 @@
       data() {
          return {
             tableCopy: null,
-            expandedIds: []
+            expandedIds: [],
+            columns: []
          }
       },
       mounted() {
+         this.columns = this.$slots.default.map( node => {
+            let {text,field,width} = node.componentOptions.propsData
+            let render = node.data.scopedSlots && node.data.scopedSlots.default
+            console.log({text,field,width,render})
+            return {text,field,width,render}
+         })
+
          let tableCopy = this.$refs.table.cloneNode(false)
          this.tableCopy = tableCopy
          let theadCopy = this.$refs.table.children[0]
