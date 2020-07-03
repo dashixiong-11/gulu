@@ -1,5 +1,5 @@
 <template>
-    <div class="tabs-item" @click="onClick" :class="classes" :data-name="name">
+    <div class="tabs-item" @click="onClick" :class="classes" :style="{color:active? color:''}" :data-name="name">
         <slot></slot>
     </div>
 </template>
@@ -10,7 +10,8 @@
         inject:['eventBus'],
         data(){
             return{
-                active:false
+                active:false,
+                color:null
             }
         },
         props:{
@@ -21,7 +22,7 @@
             name:{
                 type:String|Number,
                 required:true
-            }
+            },
         },
         computed:{
             classes(){
@@ -29,12 +30,15 @@
                     active:this.active,
                     disabled:this.disabled
                 }
-            }
+            },
         },
         created(){
             if(this.eventBus){
                 this.eventBus.$on('update:selected',(name)=>{
                     this.active = name === this.name
+                })
+                this.eventBus.$on('update:selectedColor',(color)=>{
+                    this.color = color
                 })
             }
         },
@@ -60,7 +64,6 @@
         display: flex;
         align-items: center;
         &.active{
-            color: $blue;
             font-weight: bold;
         }
         &.disabled{

@@ -130,7 +130,7 @@
         }
 
         .popover-wrapper {
-            z-index: 1;
+            z-index: 999;
             @extend .box-shadow;
             margin-top: 8px;
             position: absolute;

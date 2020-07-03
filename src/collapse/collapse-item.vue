@@ -30,7 +30,7 @@
                 if (names.indexOf(this.name)>=0) {
                     this.open = true
                 }else {
-                        this.open = false
+                    this.open = false
                 }
             })
         },

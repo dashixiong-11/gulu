@@ -78,7 +78,7 @@
                 contentWrapper.style.top = positions[this.position].top + 'px'
             },
             onClickDocument(e) {
-                if (this.$refs.popover && (this.popover === e.target || this.$refs.contentWrapper.contains(e.target))) {
+                if (this.$refs.popover && (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {
                     return
                 }
                 if (this.$refs.contentWrapper && (this.$refs.contentWrapper === e.target || this.$refs.contentWrapper.contains(e.target))) {
@@ -126,7 +126,9 @@
         filter:drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
         background: white;
         padding: .5em 1em;
+/*
         max-width: 20em;
+*/
         word-break: break-all;
         &::before, &::after {
             content: '';

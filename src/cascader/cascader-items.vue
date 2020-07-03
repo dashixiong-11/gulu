@@ -5,7 +5,7 @@
                 <span class="name">{{item.name}}</span>
                 <span class="icons">
                     <template v-if="item.name === loadingItem.name">
-                    <Icon class="loading" name="jiazaizhong"></Icon>
+                    <Icon class="loading" name="loading"></Icon>
                     </template>
                     <template v-else>
                     <Icon v-if="rightArrowVisible(item)" name="right"></Icon>
@@ -24,7 +24,6 @@
 
 <script>
     import Icon from '../icon'
-
     export default {
         name: "cascaderItems",
         components: {Icon},
@@ -53,6 +52,7 @@
         },
         methods: {
             onClickLabel(item) {
+                console.log(item)
                 let copy = JSON.parse(JSON.stringify(this.selected))
                 copy[this.level] = item
                 copy.splice(this.level + 1)
@@ -83,7 +83,7 @@
 
     .cascaderItem {
         display: flex;
-        height: 100px;
+        /*height: 100px;*/
 
         .label {
             display: flex;

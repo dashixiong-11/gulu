@@ -4,10 +4,12 @@
             <div class="message">
                 <slot></slot>
             </div>
-            <span class="line" ref="line"></span>
-            <span class="close" v-if="closeButton" @click="onClickClose">
-            {{closeButton.text}}
-        </span>
+            <template  v-if="closeButton">
+                <span class="line" ref="line"></span>
+                <span class="close" @click="onClickClose">
+                   {{closeButton.text}}
+                </span>
+            </template>
         </div>
     </div>
 </template>
@@ -18,7 +20,7 @@
         props: {
             autoClose: {
                 type: [Boolean, Number],
-                default: 5,
+                default: 3,
                 validator(value) {
                     return value === false || typeof value === 'number';
                 }
@@ -31,10 +33,7 @@
             closeButton: {
                 type: Object,
                 default() { //如果你的type是个对象，那么你的默认值就必须用函数return出来
-                    return {
-                        text: '关闭',
-                        callback: undefined
-                    }
+                    return  null
                 }
             },
             position: {
@@ -63,9 +62,11 @@
                 }
             },
             updateStyles() {
-                this.$nextTick(() => {
-                    this.$refs.line.style.height = this.$refs.toast.getBoundingClientRect().height + 'px'
-                })
+                if(this.closeButton){
+                    this.$nextTick(() => {
+                        this.$refs.line.style.height = this.$refs.toast.getBoundingClientRect().height + 'px'
+                    })
+                }
             },
             close() {
                 this.$el.remove()
@@ -125,12 +126,12 @@
 
     .wrapper {
         position: fixed;
+        z-index: 99;
         left: 50%;
         transform: translateX(-50%);
 
         &.position-top {
             top: 0;
-
             .toast {
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;

@@ -20,6 +20,10 @@
                     return ['column','row'].indexOf(value) >=0
 
                 }
+            },
+            selectedColor:{
+                type:String,
+                default:'#1980FF'
             }
         },
         data(){
@@ -54,6 +58,7 @@
         mounted() {
             this.checkChildren()
             this.selectTab()
+            this.eventBus.$emit('update:selectedColor',this.selectedColor)
         }
     }
 

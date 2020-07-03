@@ -2,29 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/dashixiong.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/dashixiong.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/button.test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/button.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/button.test.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/input.test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/input.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/input.test.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/row.test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/row.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/row.test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/button-demos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/button-demos.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/components/button.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/button.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/components/grid.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/grid.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/components/input.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/input.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/components/layout.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/layout.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/components/popover.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/popover.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/components/tabs.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/tabs.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/components/toast.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/toast.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/get-started/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/install/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/install/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/button/button-group.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button-group.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collapse/collapse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/collapse/collapse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/button/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cascader/cascader-items.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/cascader/cascader-items.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cascader/cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/cascader/cascader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collapse/collapse-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/collapse/collapse-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/input.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/popover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabs/tabs-head.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs-head.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabs/tabs-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs-item.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tabs/tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/toast.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +40,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Vue File ts" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -275,7 +280,33 @@
       <workItem from="1587692768751" duration="1591000" />
       <workItem from="1588231288410" duration="40000" />
       <workItem from="1588231343212" duration="6797000" />
-      <workItem from="1588576312175" duration="4779000" />
+      <workItem from="1588576312175" duration="6178000" />
+      <workItem from="1588605074438" duration="824000" />
+      <workItem from="1588661506800" duration="1194000" />
+      <workItem from="1588663280557" duration="3619000" />
+      <workItem from="1588685579183" duration="357000" />
+      <workItem from="1588748355984" duration="8699000" />
+      <workItem from="1588819100539" duration="683000" />
+      <workItem from="1588900706520" duration="48000" />
+      <workItem from="1588900770339" duration="150000" />
+      <workItem from="1588900936117" duration="9506000" />
+      <workItem from="1589121889432" duration="64000" />
+      <workItem from="1589246720982" duration="12416000" />
+      <workItem from="1589357711340" duration="6791000" />
+      <workItem from="1589379793685" duration="660000" />
+      <workItem from="1589440561131" duration="5479000" />
+      <workItem from="1589461124466" duration="663000" />
+      <workItem from="1589526471033" duration="8895000" />
+      <workItem from="1589710811043" duration="2711000" />
+      <workItem from="1589799715116" duration="152000" />
+      <workItem from="1589898581342" duration="4647000" />
+      <workItem from="1590064782617" duration="653000" />
+      <workItem from="1590151910710" duration="7449000" />
+      <workItem from="1590238660682" duration="3639000" />
+      <workItem from="1592464907495" duration="31000" />
+      <workItem from="1593311883193" duration="13292000" />
+      <workItem from="1593655279097" duration="16998000" />
+      <workItem from="1593757974613" duration="14884000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -578,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587195086103</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="改造table组件 添加了 table-column">
+      <created>1588766555939</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1588766555939</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
@@ -630,7 +668,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加 icon  显示逻辑" />
     <MESSAGE value="添加click-outside 指令" />
     <MESSAGE value="添加 loading icon" />
     <MESSAGE value="复习 toast组件 添加备注" />
@@ -655,7 +692,8 @@
     <MESSAGE value="完成单文件上传" />
     <MESSAGE value="完成 uploader组件 单文件上传" />
     <MESSAGE value="完成 uploader组件 多文件上传" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成 uploader组件 多文件上传" />
+    <MESSAGE value="改造table组件 添加了 table-column" />
+    <option name="LAST_COMMIT_MESSAGE" value="改造table组件 添加了 table-column" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="125" key="#Inspections" timestamp="1587715937735">
@@ -670,14 +708,14 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="358" y="214" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.23.1440.834@0.23.1440.834" timestamp="1588231600793" />
-    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588576351556">
+    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588663209881">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1588576351556" />
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1587195085744">
+    <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1588663209881" />
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1588766555376">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1587195085744" />
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1588766555376" />
     <state width="1419" height="214" key="GridCell.Tab.0.bottom" timestamp="1587058270585">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -694,25 +732,29 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state width="1419" height="214" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1587058270584" />
-    <state x="0" y="23" width="1440" height="834" key="SettingsEditor" timestamp="1586591805159">
+    <state x="0" y="23" width="1440" height="834" key="SettingsEditor" timestamp="1588900920541">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="0" y="23" width="1440" height="834" key="SettingsEditor/0.23.1440.834@0.23.1440.834" timestamp="1586591805159" />
-    <state x="507" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588238734578">
+    <state x="0" y="23" width="1440" height="834" key="SettingsEditor/0.23.1440.834@0.23.1440.834" timestamp="1588900920541" />
+    <state x="100" y="123" width="1240" height="634" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588749899998">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="507" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.834@0.23.1440.834" timestamp="1588238734578" />
-    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1588583084817">
+    <state x="100" y="123" width="1240" height="634" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.834@0.23.1440.834" timestamp="1588749899998" />
+    <state x="507" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593324701857">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1588583084817" />
+    <state x="507" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.834@0.23.1440.834" timestamp="1593324701857" />
+    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1589274038460">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1589274038460" />
     <state x="369" y="163" width="700" height="530" key="recent.locations.popup" timestamp="1586143226137">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="369" y="163" width="700" height="530" key="recent.locations.popup/0.23.1440.834@0.23.1440.834" timestamp="1586143226137" />
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1587048212435">
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1593324382865">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1587048212435" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1593324382865" />
   </component>
 </project>

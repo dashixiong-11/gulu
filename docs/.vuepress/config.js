@@ -15,6 +15,7 @@ module.exports = {
                 children: [
                     '/install/',
                     '/get-started/',
+                    '/style/',
                 ]
 
             },
@@ -29,6 +30,8 @@ module.exports = {
                     '/components/popover',
                     '/components/tabs',
                     '/components/toast',
+                    '/components/collapse',
+                    '/components/cascader',
                 ]
             }
         ]
