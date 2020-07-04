@@ -36,14 +36,12 @@
       },
       created() {
          ajax(0).then(result => {
-            console.log(result)
             this.source = result
          })
       },
       methods:{
          loadData ({id}, updateSource) {
             ajax(id).then(result => {
-               console.log(result)
                updateSource(result) // 回调:把别人传给我的函数调用一下
             })
          }

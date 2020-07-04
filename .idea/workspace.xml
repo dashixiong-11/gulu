@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/dashixiong.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/dashixiong.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/button-demos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/button-demos.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/cascader-demos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/cascader-demos.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/components/button.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/button.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/components/grid.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/grid.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/components/input.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/input.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/components/layout.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/layout.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/components/popover.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/popover.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/components/tabs.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/tabs.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/components/toast.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/toast.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/get-started/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/install/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/install/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/button/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cascader/cascader-items.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/cascader/cascader-items.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cascader/cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/cascader/cascader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collapse/collapse-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/collapse/collapse-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/input.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/popover.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tabs/tabs-head.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs-head.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tabs/tabs-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tabs/tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs/tabs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/toast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/toast.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slides/slides.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/slides/slides.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +283,8 @@
       <workItem from="1592464907495" duration="31000" />
       <workItem from="1593311883193" duration="13292000" />
       <workItem from="1593655279097" duration="16998000" />
-      <workItem from="1593757974613" duration="14884000" />
+      <workItem from="1593757974613" duration="15022000" />
+      <workItem from="1593857397128" duration="5798000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -616,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588766555939</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary=" 使用vuepress制作组建官网，更新至 cascader">
+      <created>1593784633891</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1593784633891</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView">
@@ -668,7 +653,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加click-outside 指令" />
     <MESSAGE value="添加 loading icon" />
     <MESSAGE value="复习 toast组件 添加备注" />
     <MESSAGE value="新增 popover 两个单元测试" />
@@ -693,7 +677,8 @@
     <MESSAGE value="完成 uploader组件 单文件上传" />
     <MESSAGE value="完成 uploader组件 多文件上传" />
     <MESSAGE value="改造table组件 添加了 table-column" />
-    <option name="LAST_COMMIT_MESSAGE" value="改造table组件 添加了 table-column" />
+    <MESSAGE value=" 使用vuepress制作组建官网，更新至 cascader" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 使用vuepress制作组建官网，更新至 cascader" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="125" key="#Inspections" timestamp="1587715937735">
@@ -712,10 +697,10 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1588663209881" />
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1588766555376">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1593784633573">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1588766555376" />
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1593784633573" />
     <state width="1419" height="214" key="GridCell.Tab.0.bottom" timestamp="1587058270585">
       <screen x="0" y="23" width="1440" height="834" />
     </state>

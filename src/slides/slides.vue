@@ -10,14 +10,18 @@
             <slot></slot>
          </div>
       </div>
-      <div class="g-slides-dots">
-         <span @click="select(selectedIndex - 1)" class="left" data-action="prev">
+      <div class="g-slides-dots" :class="{ indicatorPosition:indicatorPosition === 'inside' }" v-if="indicatorPosition !== 'none'">
+         <!--
+         <span  @click="select(selectedIndex - 1)" class="left g-slides-dots-dot" data-action="prev">
             <g-icon name="left"></g-icon>
          </span>
-         <span v-for="n in childrenLength" :key="n" :data-index="n-1" :class="{active: selectedIndex === n-1}" @click="select(n-1)" >{{n}}</span>
-         <span @click="select(selectedIndex + 1)" class="right" data-action="next">
+-->
+         <span v-for="n in childrenLength" :key="n" :data-index="n-1" :class="{active: selectedIndex === n-1}" class="g-slides-dots-dot" @click="select(n-1)" > </span>
+<!--
+         <span @click="select(selectedIndex + 1)" class="right g-slides-dots-dot" data-action="next">
             <g-icon name="right"></g-icon>
          </span>
+-->
       </div>
    </div>
 </template>
@@ -31,6 +35,7 @@
       props: {
          selected: {
             type: String,
+            required:true
          },
          autoPlay: {
             type: Boolean,
@@ -39,6 +44,13 @@
          autoPlayDelay:{
             type:Number,
             default: 3000
+         },
+         indicatorPosition:{
+            type:String,
+            default:'inside',
+            validator(value){
+               return ['inside','outside','none'].indexOf(value) >= 0
+            }
          }
       },
       data(){
@@ -149,6 +161,8 @@
 
 <style scoped lang="scss">
    .g-slides {
+      position: relative;
+      width: 100%;
       &-window {
          overflow: hidden;
       }
@@ -156,24 +170,29 @@
          position: relative;
       }
       .g-slides-dots{
+         margin: 10px 0;
          padding: 4px 0;
          display: flex;
          align-items: center;
          justify-content: center;
-         >span{
-            width: 1.2em;
-            height: 1.2em;
+         &.indicatorPosition{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+         }
+         &-dot{
+            width: 2em;
+            height: .2em;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #ddd;
-            border-radius: 50%;
+            background: #e7e7e7;
             margin: 0 .2em;
             &:hover{
                cursor: pointer;
             }
             &.active{
-               background-color: black;
+               background-color: #838383;
                color: white;
                &:hover{
                   cursor: default;
