@@ -6,10 +6,10 @@
             <tr>
                <th v-if="expandField" :style="{width:'50px'}">
                </th>
-               <th v-else-if="choosable && !expandField" :style="{width:'50px'}" class="gulu-table-center">
+               <th v-else-if="checkable && !expandField" :style="{width:'50px'}" class="gulu-table-center">
                   <input type="checkbox" @change="onChangeAllItems" ref="allChecked" :checked="areAllItemsSelected"/>
                </th>
-               <th v-if="numberVisible">#</th>
+               <th v-if="numberVisible" class="gulu-table-center" style="width: 50px;">#</th>
                <th :style="{width:column.width+'px'}" v-for="column in columns" :key="column.field">
                   <div class="gulu-table-header">
                      {{column.text}}
@@ -28,7 +28,7 @@
                   <td v-if="expandField" :style="{width:'50px'}" class="gulu-table-center">
                      <g-icon :name=" inExpandedIds(item.id)? 'sub':'add'" @click="expandItem(item.id)"></g-icon>
                   </td>
-                  <td v-else-if="choosable && !expandField" :style="{width:'50px'}" class="gulu-table-center">
+                  <td v-else-if="checkable && !expandField" :style="{width:'50px'}" class="gulu-table-center">
                      <input type="checkbox" @change="onChangeItem(item,index,$event)" :checked="inSelectedItems(item)"/>
                   </td>
                   <td :style="{width:'50px'}" class="gulu-table-center" v-if="numberVisible">{{index+1}}</td>
@@ -111,9 +111,9 @@
             default: false
          },
          expandField: {
-            type: String
+            type: Boolean
          },
-         choosable:{
+         checkable:{
             type:Boolean,
             default:false
          }
@@ -126,22 +126,27 @@
          }
       },
       mounted() {
-         this.columns = this.$slots.default.map( node => {
-            let {text,field,width} = node.componentOptions.propsData
-            let render = node.data.scopedSlots && node.data.scopedSlots.default
-            console.log({text,field,width,render})
-            return {text,field,width,render}
+         console.log(this.expandField)
+         this.$slots.default.forEach( (node)=>{
+            if(node.componentOptions){
+               let {text,field,width} = node.componentOptions.propsData
+               let render = node.data.scopedSlots && node.data.scopedSlots.default
+               this.columns.push({text,field,width,render})
+            }
          })
 
          let tableCopy = this.$refs.table.cloneNode(false)
          this.tableCopy = tableCopy
          let theadCopy = this.$refs.table.children[0]
-         let {height} = theadCopy.getBoundingClientRect()
-         this.$refs.tableWrapper.style.marginTop = height + 'px'
-         this.$refs.tableWrapper.style.height = this.height - height + 'px'
-         tableCopy.classList.add('gulu-table-copy')
-         tableCopy.appendChild(theadCopy)
-         this.$refs.wrapper.appendChild(tableCopy)
+         let height
+         this.$nextTick( ()=>{
+            height = theadCopy.getBoundingClientRect().height
+            this.$refs.tableWrapper.style.marginTop = height + 'px'
+            this.$refs.tableWrapper.style.height = this.height - height + 'px'
+            tableCopy.classList.add('gulu-table-copy')
+            tableCopy.appendChild(theadCopy)
+            this.$refs.wrapper.appendChild(tableCopy)
+         })
       },
       beforeDestroy() {
          this.tableCopy.remove()

@@ -119,6 +119,7 @@
                let formDate = new FormData()
                formDate.append(this.name, rawFile)
                this.doUploadFile(formDate, (res) => {
+                  console.log(res)
                   let url = this.parseResponse(res)
                   this.afterUploadFile(newName, url)
                }, (xhr) => {
@@ -127,6 +128,7 @@
             }
          },
          afterUploadFile(newName, url) {
+            console.log(this.fileList)
             let file = this.fileList.filter(f => f.name === newName)[0]
             let index = this.fileList.indexOf(file)
             let copy = JSON.parse(JSON.stringify(file))

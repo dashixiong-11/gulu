@@ -63,6 +63,16 @@
       align-items: center;
       justify-content: center;
       color: $font-gray;
+      background: white;
+
+      &:first-child{
+         border-top-left-radius: $border-radius;
+         border-top-right-radius: $border-radius;
+      }
+      &:last-child{
+         border-bottom-left-radius: $border-radius;
+         border-bottom-right-radius: $border-radius;
+      }
 
       .g-nav-sub-label {
          padding: 10px 20px;
@@ -106,6 +116,7 @@
 
 
       &-popover {
+         z-index: 999;
          position: absolute;
          top: 100%;
          left: 0;
@@ -125,6 +136,16 @@
             box-shadow: 0 0 3px $box-shadow-color;
             display: flex;
             flex-direction: column;
+/*
+             div:first-child{
+               border-top-left-radius: $border-radius;
+               border-top-right-radius: $border-radius;
+            }
+            div:first-child{
+               border-top-left-radius: $border-radius;
+               border-top-right-radius: $border-radius;
+            }
+*/
             .g-nav-item{
 
             }

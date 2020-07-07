@@ -6,8 +6,12 @@
             <div class="gulu-date-picker-pop">
                <template v-if="type === 'day'">
                   <div class="gulu-date-picker-nav">
-                  <span v-if=" mode === 'year' ||'day'"
+                  <span v-if=" mode === 'month' || mode === 'day'"
                         class="gulu-date-picker-nav-navItem gulu-date-picker-nav-prevYear" @click="previousYear">
+                     <g-icon name="doubleLeft"></g-icon>
+                  </span>
+                     <span v-if=" mode === 'year'"
+                           class="gulu-date-picker-nav-navItem gulu-date-picker-nav-prevYear" @click="lastDecade">
                      <g-icon name="doubleLeft"></g-icon>
                   </span>
                      <span v-if=" mode === 'day'"
@@ -25,7 +29,11 @@
                            class="gulu-date-picker-nav-navItem gulu-date-picker-nav-nextMonth" @click="nextMonth">
                            <g-icon name="right"></g-icon>
                       </span>
-                     <span v-if="mode === 'year' || 'day'"
+                     <span v-if="mode === 'month' || mode === 'day'"
+                           class="gulu-date-picker-nav-navItem gulu-date-picker-nav-nextYear" @click="nextYear">
+                     <g-icon name="doubleRight"></g-icon>
+                  </span>
+                     <span v-if="mode === 'year'"
                            class="gulu-date-picker-nav-navItem gulu-date-picker-nav-nextYear" @click="nextYear">
                      <g-icon name="doubleRight"></g-icon>
                   </span>
@@ -77,6 +85,87 @@
                      </div>
                   </div>
                </template>
+
+               <template v-if="type === 'month'">
+                  <div class="gulu-date-picker-nav">
+                  <span v-if=" mode === 'year'"
+                        class="gulu-date-picker-nav-navItem gulu-date-picker-nav-prevYear" @click="lastDecade">
+                     <g-icon name="doubleLeft"></g-icon>
+                  </span>
+                     <span v-if=" mode === 'month'"
+                           class="gulu-date-picker-nav-navItem gulu-date-picker-nav-prevYear" @click="previousYear">
+                     <g-icon name="doubleLeft"></g-icon>
+                  </span>
+                     <div>
+                        <span v-show="mode === 'day' || mode === 'month'" @click="clickYear(display.year)"
+                              class="gulu-date-picker-nav-year"> {{display.year}}年</span>
+                        <span v-show="mode === 'year'" @click="clickYear(display.year)"
+                              class="gulu-date-picker-nav-year"> {{tenYears[0]}}年 - {{tenYears[1]}}年</span>
+                     </div>
+                     <span v-if="mode === 'year'"
+                           class="gulu-date-picker-nav-navItem gulu-date-picker-nav-nextYear" @click="nextDecade">
+                     <g-icon name="doubleRight"></g-icon>
+                  </span>
+                     <span v-if="mode === 'month'"
+                           class="gulu-date-picker-nav-navItem gulu-date-picker-nav-nextYear" @click="nextYear">
+                     <g-icon name="doubleRight"></g-icon>
+                  </span>
+                  </div>
+                  <div class="gulu-date-picker-panels">
+                     <div v-show="mode === 'month'">
+                        <div class="gulu-date-picker-month">
+                           <div class="gulu-date-picker-month-row" v-for="(i,index) in help.range(0,3)" :key="index">
+                           <span
+                                 :class="{isThisMonth:isThisMonth(getVisibleMonth(i,j))}"
+                                 @click="selectedMonth(getVisibleMonth(i,j))"
+                                 class="gulu-date-picker-month-cell" v-for=" (j,index) in help.range(1,5)" :key="index">
+                              {{month[getVisibleMonth(i,j)-1]}}
+                           </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div v-show="mode === 'year'">
+                        <div class="gulu-date-picker-year">
+                           <div class="gulu-date-picker-year-row" v-for="(i,index) in help.range(0,3)" :key="index">
+                              <span
+                                    @click="selectedYear(tenYears[getVisibleYear(i,j)])"
+                                    :class="{isThisYear:isThisYear(tenYears[getVisibleYear(i,j)])}"
+                                    class="gulu-date-picker-year-cell" v-for="(j,index) in help.range(0,4)">
+                                 {{tenYears[getVisibleYear(i,j)]}}
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </template>
+
+               <template v-if="type === 'year'">
+                  <div class="gulu-date-picker-nav">
+                     <span class="gulu-date-picker-nav-navItem gulu-date-picker-nav-prevYear" @click="lastDecade">
+                        <g-icon name="doubleLeft"></g-icon>
+                     </span>
+                     <div>
+                        <span @click="clickYear(display.year)" class="gulu-date-picker-nav-year"> {{tenYears[0]}}年 - {{tenYears[9]}}年</span>
+                     </div>
+                     <span class="gulu-date-picker-nav-navItem gulu-date-picker-nav-nextYear" @click="nextDecade">
+                        <g-icon name="doubleRight"></g-icon>
+                     </span>
+                  </div>
+                  <div class="gulu-date-picker-panels">
+                     <div>
+                        <div class="gulu-date-picker-year">
+                           <div class="gulu-date-picker-year-row" v-for="(i,index) in help.range(0,3)" :key="index">
+                              <span
+                                    @click="selectedYear(tenYears[getVisibleYear(i,j)])"
+                                    :class="{isThisYear:isThisYear(tenYears[getVisibleYear(i,j)])}"
+                                    class="gulu-date-picker-year-cell" v-for="(j,index) in help.range(0,4)">
+                                 {{tenYears[getVisibleYear(i,j)]}}
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </template>
             </div>
          </template>
       </g-popover>
@@ -101,7 +190,9 @@
             week: ['日', '一', '二', '三', '四', '五', '六'],
             month: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
             display: {year, month},
-            mode: 'day'
+            mode: this.type,
+            indexYear: null,
+            tenYears: []
          }
       },
       props: {
@@ -115,29 +206,32 @@
       },
       computed: {
          formattedValue() {
+            let time
             if (!this.value) {
                return ""
             }
             const [year, month, day] = help.getYearMonthDay(this.value)
-            return `${year}-${this.help.padLeft(month)}-${this.help.padLeft(day)}`
+            if (this.type === 'day') {
+               time = `${year}-${this.help.padLeft(month)}-${this.help.padLeft(day)}`
+            } else if (this.type === 'month') {
+               time = `${year}-${this.help.padLeft(month)}`
+            } else if (this.type === 'year') {
+               time = `${year}`
+            }
+            return time
          },
          visibleDays() {
             return help.visibleDay(this.display.year, this.display.month)
          },
-         tenYears() {
-            let array = []
-            let stringArray = `${this.display.year}`.split('')
-            for(let i=0; i<=9; i++){
-               stringArray.splice(3,1,`${i}`)
-               let copy = JSON.parse(JSON.stringify(stringArray))
-               let x = copy.join('')
-               array.push(x)
-            }
-
-            return array
+      },
+      watch: {
+         indexYear(val, oldVal) {
+            this.decade()
          }
       },
       mounted() {
+         this.indexYear = this.display.year
+         this.decade()
       },
       methods: {
          getVisibleDay(row, col) {
@@ -146,7 +240,7 @@
          getVisibleMonth(row, col) {
             return row * 4 + col
          },
-         getVisibleYear(row,col){
+         getVisibleYear(row, col) {
             return row * 4 + col
          },
          isCurrentMonth(date) {
@@ -156,7 +250,7 @@
          selectDay(date) {
             console.log(date)
             if (this.isCurrentMonth(date)) {
-               this.$emit('value', date)
+               this.$emit('update:value', date)
             }
             this.$refs.pop.close()
          },
@@ -165,17 +259,28 @@
             let [y1, m1] = [this.display.year, date]
             return y === y1 && m === m1
          },
-         isThisYear(date){
+         isThisYear(date) {
             let d = Number(date)
             return this.display.year === d
          },
-         selectedYear(date){
+         selectedYear(date) {
             this.display.year = new Date(date, 1).getFullYear()
-            this.mode = 'month'
+            if (this.type === 'year') {
+               this.$emit('update:value', new Date(this.display.year, this.display.month - 1))
+               this.$refs.pop.close()
+            } else {
+               this.mode = 'month'
+            }
          },
          selectedMonth(month) {
+            console.log(this.display)
             this.display.month = month
-            this.mode = 'day'
+            if (this.type === 'month') {
+               this.$emit('update:value', new Date(this.display.year, this.display.month - 1))
+               this.$refs.pop.close()
+            } else {
+               this.mode = 'day'
+            }
          },
          isToday(date) {
             let [year, month, day] = date && help.getYearMonthDay(date)
@@ -213,11 +318,28 @@
             const [year, month] = help.getYearMonthDay(newDate)
             this.display = {year, month}
          },
-         redirect(){
+         redirect() {
             this.display.year = new Date().getFullYear()
             this.display.month = new Date().getMonth() + 1
             this.display.day = new Date().getDate()
             this.selectDay(new Date())
+         },
+         lastDecade() {
+            this.indexYear -= 10
+         },
+         nextDecade() {
+            this.indexYear += 10
+         },
+         decade() {
+            let array = []
+            let stringArray = `${this.indexYear}`.split('')
+            for (let i = 0; i <= 9; i++) {
+               stringArray.splice(3, 1, `${i}`)
+               let copy = JSON.parse(JSON.stringify(stringArray))
+               let x = copy.join('')
+               array.push(x)
+            }
+            this.tenYears = array
          },
          clickMonth() {
             this.mode = 'month'
@@ -267,21 +389,25 @@
             }
          }
       }
-      &-year{
-         &-row{
-            display:flex;
+
+      &-year {
+         &-row {
+            display: flex;
             align-items: center;
          }
-         &-cell{
+
+         &-cell {
             width: 25%;
             margin: 1em auto;
             padding: .5em 1em;
             cursor: pointer;
-            &.isThisYear{
+
+            &.isThisYear {
                color: $blue;
                font-weight: bold;
             }
-            &:hover{
+
+            &:hover {
                color: $blue;
             }
          }

@@ -16,16 +16,23 @@
         <g-button icon="setting">设置</g-button>
         <g-button :loading="true">加载中</g-button>
         <g-button icon="download">下载</g-button>
-        <pre><code>{{content}}</code></pre>
+
+        <g-button-group>
+            <g-button> 按钮1</g-button>
+            <g-button> 按钮2</g-button>
+        </g-button-group>
+
+<!--        <pre><code>{{content}}</code></pre>-->
     </div>
 </template>
 
 <script>
-    import Button from '../../../src/button/button'
+    import GButton from '../../../src/button/button'
+    import GButtonGroup from '../../../src/button/button-group'
     import '../../../src/svg'
 
     export default {
-        components: {gButton: Button},
+        components: {GButton,GButtonGroup},
         data(){
             return {
             }
@@ -33,3 +40,11 @@
     }
 </script>
 ```
+## API
+
+### props
+| 属性名         | 说明           | 类型   | 可选值 | 默认值
+| ------------- |----------------|-------| ------| ----
+| icon |  按钮的icon样式 |  String | - | - 
+
+> `g-button-group` 为 `g-button` 的容器组件，可以使多个button组合使用。

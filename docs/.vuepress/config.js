@@ -33,6 +33,12 @@ module.exports = {
                     '/components/collapse',
                     '/components/cascader',
                     '/components/slides',
+                    '/components/nav',
+                    '/components/pager',
+                    '/components/uploader',
+                    '/components/sticky',
+                    '/components/table',
+                    '/components/dataPicker',
                 ]
             }
         ]

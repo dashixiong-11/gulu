@@ -22,11 +22,16 @@
       created() {
          this.root.addItem(this)
       },
+      mounted() {
+         if( this.root.$options.propsData.selected === this.name){
+            this.onClick()
+         }
+      },
       methods: {
          onClick() {
             this.root.namePath = []
             this.$parent.upDateNamePath && this.$parent.upDateNamePath()
-            this.$emit('update:selected', this.name)
+            this.root.$emit('update:selected', this.name)
          }
       }
    }

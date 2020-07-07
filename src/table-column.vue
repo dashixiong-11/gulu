@@ -1,6 +1,5 @@
 <template>
    <div class="gulu-table-column" >
-      <slot></slot>
    </div>
    
 </template>

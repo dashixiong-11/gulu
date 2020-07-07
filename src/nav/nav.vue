@@ -13,7 +13,13 @@
          }
       },
       props: {
-         selected: String
+         selected:{
+            type:String,
+            required: true
+         },
+         callback:{
+            type:Function,
+         }
       },
       data() {
          return {
@@ -34,7 +40,7 @@
          addItem(vm){
             this.items.push(vm)
          },
-         updateChildren: function () {
+         updateChildren () {
             this.items.forEach(vm => {
                vm.selected = this.selected === vm.name;
             })

@@ -126,6 +126,7 @@
         filter:drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
         background: white;
         padding: .5em 1em;
+        z-index: 999;
 /*
         max-width: 20em;
 */

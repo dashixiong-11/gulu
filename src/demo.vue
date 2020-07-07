@@ -5,10 +5,11 @@
    </div>
 -->
    <div>
-      <g-row>
-         <g-col class="zzz" span="9" offset="2">1</g-col>
-         <g-col class="zzz" span="10" offset="3">2</g-col>
-      </g-row>
+      <g-table :data-source="dataSource" bordered :selected-items.sync="selected" number-visible :order-by.sync="orderBy"
+               :loading="loading" :height="400" :expend-field="true"  checkable>
+         <g-table-column text="姓名" field="name" :width="100"></g-table-column>
+         <g-table-column text="分数" field="score"></g-table-column>
+      </g-table>
 <!--
       <div class="parent" ref="parent">
          <div class="child" ref="child">
@@ -125,11 +126,13 @@
    import GButton from './button/button'
    import GCol from './grid/col'
    import GRow from './grid/row'
+   import GTable from './table'
+   import GTableColumn from './table-column'
    Vue.use(plugin)
    import plugin from './plugin'
 
    export default {
-      components: { GDatePicker,GButton,GCol,GRow },
+      components: { GDatePicker,GButton,GCol,GRow,GTable,GTableColumn },
       data() {
          return {
             error:'',

@@ -56,6 +56,7 @@
 <style scoped lang="scss">
    .gulu-sticky {
       & > .sticky {
+         z-index: 999;
          position: fixed;
          width: 100%;
       }
