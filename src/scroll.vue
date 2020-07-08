@@ -165,7 +165,7 @@
    .gulu-scroll {
       transition: transform 0.05s ease;
       &-wrapper {
-         border: 1px solid red;
+         border: 1px solid #e5e5e5;
          overflow: hidden;
          position: relative;
       }

@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/button-demos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/button-demos.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/components/button.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/button.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/button/button-group.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button-group.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/button/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/date-picker/date-picker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/date-picker/date-picker.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nav/nav-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/nav/nav-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nav/nav-sub.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/nav/nav-sub.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nav/nav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/nav/nav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/popover.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sticky.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/sticky.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table-column.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/table-column.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/table.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uploader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/uploader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scroll.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/scroll.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +287,8 @@
       <workItem from="1593931529527" duration="14330000" />
       <workItem from="1594000417622" duration="5754000" />
       <workItem from="1594025508257" duration="14116000" />
-      <workItem from="1594102272129" duration="11133000" />
+      <workItem from="1594102272129" duration="11395000" />
+      <workItem from="1594199883077" duration="3097000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -633,7 +619,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593876204908</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary=" 使用vuepress制作组建官网，更新至 dataPicker 组件 忘了提交新的文件了补充提交">
+      <created>1594123670782</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1594123670782</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView">
@@ -685,7 +678,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="新增 popover 两个单元测试" />
     <MESSAGE value="add yarn test" />
     <MESSAGE value="Travis Cl" />
     <MESSAGE value="完成轮播基本雏形" />
@@ -710,7 +702,8 @@
     <MESSAGE value=" 使用vuepress制作组建官网，更新至 cascader" />
     <MESSAGE value=" 使用vuepress制作组建官网，更新至 sildes 组件" />
     <MESSAGE value=" 使用vuepress制作组建官网，更新至 sildes 组件 忘了提交新的文件了补充提交" />
-    <option name="LAST_COMMIT_MESSAGE" value=" 使用vuepress制作组建官网，更新至 sildes 组件 忘了提交新的文件了补充提交" />
+    <MESSAGE value=" 使用vuepress制作组建官网，更新至 dataPicker 组件 忘了提交新的文件了补充提交" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 使用vuepress制作组建官网，更新至 dataPicker 组件 忘了提交新的文件了补充提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="125" key="#Inspections" timestamp="1587715937735">
@@ -729,10 +722,10 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1588663209881" />
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1593876204742">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1594123670560">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1593876204742" />
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1594123670560" />
     <state width="1419" height="214" key="GridCell.Tab.0.bottom" timestamp="1594109234423">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -769,9 +762,9 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="369" y="163" width="700" height="530" key="recent.locations.popup/0.23.1440.834@0.23.1440.834" timestamp="1586143226137" />
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1594111816281">
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1594200027177">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1594111816281" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1594200027177" />
   </component>
 </project>

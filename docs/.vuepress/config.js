@@ -39,6 +39,7 @@ module.exports = {
                     '/components/sticky',
                     '/components/table',
                     '/components/dataPicker',
+                    '/components/scroll',
                 ]
             }
         ]
