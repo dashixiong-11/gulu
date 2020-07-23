@@ -1,7 +1,7 @@
 <template>
     <button class='g-button' :class='{[`icon-${iconPosition}`]:true}' @click="$emit('click')">
         <g-icon v-if="icon" :class="{loading: icon === 'loading',icon:icon ==='loading'}"  :name='icon'></g-icon>
-        <div class="content">
+        <div class="contents">
             <slot></slot>
         </div>
     </button>
@@ -45,7 +45,7 @@
         font-size: $font-size;
         vertical-align: middle;
         .icon { order: 1; margin-right: .1em; }
-        .content {order: 2;}
+        .contents {order: 2;}
         &:hover {border-color: $border-color-hover;}
         &:active {background-color: $button-active-bg;}
         &:focus {outline: none;}
@@ -55,6 +55,6 @@
     }
     .icon-right {
         .icon {order: 2;margin-left: .1em;margin-right: 0;}
-        .content {order: 1;}
+        .contents {order: 1;}
     }
 </style>

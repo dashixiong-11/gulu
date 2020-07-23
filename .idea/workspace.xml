@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2b521a0c-31db-45d8-b351-fabbf68c2d64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/layout-demos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/layout-demos.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/button/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button/button.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scroll.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/scroll.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,7 +289,17 @@
       <workItem from="1594000417622" duration="5754000" />
       <workItem from="1594025508257" duration="14116000" />
       <workItem from="1594102272129" duration="11395000" />
-      <workItem from="1594199883077" duration="3097000" />
+      <workItem from="1594199883077" duration="4269000" />
+      <workItem from="1594265373859" duration="124000" />
+      <workItem from="1594374876772" duration="713000" />
+      <workItem from="1594610792065" duration="598000" />
+      <workItem from="1594698599784" duration="598000" />
+      <workItem from="1594718207873" duration="531000" />
+      <workItem from="1594738223983" duration="508000" />
+      <workItem from="1594742617355" duration="64000" />
+      <workItem from="1594744896111" duration="589000" />
+      <workItem from="1594816680354" duration="10000" />
+      <workItem from="1595473323459" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="一次测试提交">
       <created>1556618759263</created>
@@ -626,7 +637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594123670782</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary=" 使用vuepress制作组建官网，完成">
+      <created>1594211761895</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1594211761895</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
@@ -678,7 +696,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add yarn test" />
     <MESSAGE value="Travis Cl" />
     <MESSAGE value="完成轮播基本雏形" />
     <MESSAGE value="解决 控制动画方向不及时 bug  解决 无缝bug 添加mouseEnter 暂停功能" />
@@ -703,7 +720,8 @@
     <MESSAGE value=" 使用vuepress制作组建官网，更新至 sildes 组件" />
     <MESSAGE value=" 使用vuepress制作组建官网，更新至 sildes 组件 忘了提交新的文件了补充提交" />
     <MESSAGE value=" 使用vuepress制作组建官网，更新至 dataPicker 组件 忘了提交新的文件了补充提交" />
-    <option name="LAST_COMMIT_MESSAGE" value=" 使用vuepress制作组建官网，更新至 dataPicker 组件 忘了提交新的文件了补充提交" />
+    <MESSAGE value=" 使用vuepress制作组建官网，完成" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 使用vuepress制作组建官网，完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="125" key="#Inspections" timestamp="1587715937735">
@@ -722,10 +740,10 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="408" y="183" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1588663209881" />
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1594123670560">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1594211761507">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1594123670560" />
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1594211761507" />
     <state width="1419" height="214" key="GridCell.Tab.0.bottom" timestamp="1594109234423">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -754,17 +772,13 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="507" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.834@0.23.1440.834" timestamp="1593324701857" />
-    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1589274038460">
+    <state x="368" y="199" width="858" height="546" key="find.popup" timestamp="1595473426844">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1589274038460" />
-    <state x="369" y="163" width="700" height="530" key="recent.locations.popup" timestamp="1586143226137">
+    <state x="368" y="199" width="858" height="546" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1595473426844" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1594211786752">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="369" y="163" width="700" height="530" key="recent.locations.popup/0.23.1440.834@0.23.1440.834" timestamp="1586143226137" />
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1594200027177">
-      <screen x="0" y="23" width="1440" height="834" />
-    </state>
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1594200027177" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1594211786752" />
   </component>
 </project>

@@ -63,7 +63,7 @@
       }
    }
 </script>
-<style>
+<style lang="scss" scoped >
    .header{
       background: #7dbcea;
       min-height: 50px;

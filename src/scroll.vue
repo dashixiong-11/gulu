@@ -1,7 +1,7 @@
 <template>
    <div ref="parent" class="gulu-scroll-wrapper" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave" @wheel="onWheel"
         @mousemove="onMouseMove">
-      <div ref="child" class="gulu-scroll" :style="{transform: `translateY(${this.contentY}px)`}">
+      <div ref="child" class="gulu-scroll" :style="{transform: `translateY(${contentY}px)`}">
          <slot></slot>
       </div>
       <div class="gulu-scroll-track" v-show="scrollBarVisible">
